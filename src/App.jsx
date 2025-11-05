@@ -10,11 +10,11 @@ import { Home, LayoutGrid, Heart, BookOpen, User, Search } from 'lucide-react';
 
 // --- Mock Data for Home Screen ---
 const popularCategories = [
-  { name: 'TVs', image: 'https://placehold.co/100x100/e0e0e0/333?text=TV' },
-  { name: 'Washing machines', image: 'https://placehold.co/100x100/e0e0e0/333?text=Washer' },
-  { name: 'Laptops', image: 'https://placehold.co/100x100/e0e0e0/333?text=Laptop' },
-  { name: 'Mattresses', image: 'https://placehold.co/100x100/e0e0e0/333?text=Mattress' },
-  { name: 'Headphones', image: 'https://placehold.co/100x100/e0e0e0/333?text=Audio' },
+  { name: 'TVs', image: '/tv.webp' },
+  { name: 'Washing machines', image: '/wasingmachines.webp' },
+  { name: 'Laptops', image: '/laptops.webp' },
+  { name: 'Mattresses', image: '/mattress.webp' },
+  { name: 'Headphones', image: '/headphones.webp' },
 ];
 
 function App() {
@@ -68,7 +68,7 @@ function App() {
             <section className="home-section">
               <div className="promo-card">
                 <img 
-                  src="https://placehold.co/600x400/ccc/666?text=Promo+Image" 
+                  src="/brandimage.jpg" 
                   alt="We put people over profit" 
                   className="promo-card-image"
                   onError={(e) => e.target.src = 'https://placehold.co/600x400/f0f0f0/999?text=Image'}
