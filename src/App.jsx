@@ -182,6 +182,14 @@ function App() {
                           {section.subheadline && (
                             <p className="article-subheadline">{section.subheadline}</p>
                           )}
+                          {section.image && (
+                            <img 
+                              src={section.image} 
+                              alt={section.headline}
+                              className="article-main-image"
+                              onError={(e) => e.target.src = 'https://placehold.co/800x400/f0f0f0/999?text=Article+Image'}
+                            />
+                          )}
                           {section.author && (
                             <p className="article-author">By {section.author}</p>
                           )}

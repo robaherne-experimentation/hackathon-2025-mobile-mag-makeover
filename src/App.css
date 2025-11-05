@@ -916,6 +916,16 @@ body {
   line-height: 1.4;
 }
 
+.article-main-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0 2rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
 .article-author {
   font-size: 1rem;
   color: #666;
