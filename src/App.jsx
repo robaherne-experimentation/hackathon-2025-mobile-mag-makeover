@@ -6,6 +6,7 @@ import articlesData from './data/articles.json';
 import magazinesData from './data/magazines.json';
 import magazineIssuesData from './data/magazine-issues.json';
 import magazineContentsData from './data/magazine-contents.json';
+import foodPricesArticleData from './data/article-how-to-beat-rising-food-prices.json';
 
 // Import icons from lucide-react
 // Don't forget to run: npm install lucide-react
@@ -27,6 +28,7 @@ function App() {
   const [savedArticles, setSavedArticles] = useState([]);
   const [showMagazineDetails, setShowMagazineDetails] = useState(false);
   const [selectedIssueId, setSelectedIssueId] = useState(null);
+  const [selectedArticleId, setSelectedArticleId] = useState(null);
 
   // Filter articles (retained for other tabs)
   const filteredArticles = (articlesData || []).filter(article =>
@@ -155,8 +157,110 @@ function App() {
         );
       }
       case 'magazine':
+        // Show article page if an article is selected
+        if (selectedArticleId) {
+          const article = foodPricesArticleData.articles[0]; // Use the food prices article
+          
+          return (
+            <div className="article-page-container">
+              <div className="article-header">
+                <button 
+                  className="back-button"
+                  onClick={() => setSelectedArticleId(null)}
+                >
+                  ← Back
+                </button>
+              </div>
+              
+              <article className="article-content">
+                {article.sections.map((section, index) => {
+                  switch (section.section_type) {
+                    case 'main_article':
+                      return (
+                        <div key={index} className="article-section">
+                          <h1 className="article-headline">{section.headline}</h1>
+                          {section.subheadline && (
+                            <p className="article-subheadline">{section.subheadline}</p>
+                          )}
+                          {section.author && (
+                            <p className="article-author">By {section.author}</p>
+                          )}
+                          {section.content && (
+                            <div className="article-text">
+                              {section.content.split('\n\n').map((paragraph, pIndex) => (
+                                <p key={pIndex}>{paragraph}</p>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    
+                    case 'callout_box':
+                      return (
+                        <div key={index} className="callout-box">
+                          <h3 className="callout-title">{section.title}</h3>
+                          {section.content && (
+                            <div className="callout-content">
+                              {section.content.split('\n\n').map((paragraph, pIndex) => (
+                                <p key={pIndex}>{paragraph}</p>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    
+                    case 'feature_callout':
+                      return (
+                        <div key={index} className="feature-callout">
+                          <h4 className="feature-title">{section.title}</h4>
+                          {section.content && (
+                            <p className="feature-content">{section.content}</p>
+                          )}
+                        </div>
+                      );
+                    
+                    case 'data_table':
+                      return (
+                        <div key={index} className="data-table-section">
+                          <h3 className="table-title">{section.title}</h3>
+                          {section.subheadline && (
+                            <p className="table-subheadline">{section.subheadline}</p>
+                          )}
+                          <div className="table-container">
+                            <table className="data-table">
+                              <thead>
+                                <tr>
+                                  {section.columns.map((column, cIndex) => (
+                                    <th key={cIndex}>{column}</th>
+                                  ))}
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {section.table_data.map((row, rIndex) => (
+                                  <tr key={rIndex}>
+                                    <td className="retailer-name">{row.Retailer}</td>
+                                    <td className="price">{row['Average price']}</td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                          {section.note && (
+                            <p className="table-note">{section.note}</p>
+                          )}
+                        </div>
+                      );
+                    
+                    default:
+                      return null;
+                  }
+                })}
+              </article>
+            </div>
+          );
+        }
         // Show contents page if an issue is selected
-        if (selectedIssueId) {
+        else if (selectedIssueId) {
           const issueContent = magazineContentsData.find(content => content.issueId === selectedIssueId);
           if (!issueContent) return null;
           
@@ -181,7 +285,16 @@ function App() {
 
               {/* Featured Article */}
               {issueContent.articles.filter(article => article.isFeatured).map(article => (
-                <div key={article.id} className="featured-article">
+                <div 
+                  key={article.id} 
+                  className={`featured-article ${article.title === 'How to beat rising food prices' ? 'clickable' : ''}`}
+                  onClick={() => {
+                    if (article.title === 'How to beat rising food prices') {
+                      setSelectedArticleId(article.id);
+                    }
+                  }}
+                  style={{ cursor: article.title === 'How to beat rising food prices' ? 'pointer' : 'default' }}
+                >
                   <img 
                     src={article.image} 
                     alt={article.title}

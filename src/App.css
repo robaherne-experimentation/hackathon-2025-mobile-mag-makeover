@@ -868,3 +868,191 @@ body {
   margin: 0;
   line-height: 1.4;
 }
+
+/* --- Featured Article Clickable State --- */
+.featured-article.clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+/* --- Article Page Styles (Which.co.uk inspired) --- */
+.article-page-container {
+  background: #ffffff;
+  min-height: 100vh;
+  font-family: 'Tiempos', serif;
+}
+
+.article-header {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.article-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  line-height: 1.6;
+}
+
+.article-section {
+  margin-bottom: 2.5rem;
+}
+
+.article-headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+  font-family: 'Tiempos', serif;
+}
+
+.article-subheadline {
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  margin: 0 0 1.5rem 0;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.article-author {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 2rem 0;
+  font-style: italic;
+}
+
+.article-text p {
+  font-size: 1.125rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+/* Callout Box Styles */
+.callout-box {
+  background: #f8f9fa;
+  border-left: 4px solid #e81c30;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.callout-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.callout-content p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.callout-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Feature Callout Styles */
+.feature-callout {
+  background: #fff;
+  border: 2px solid #e81c30;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e81c30;
+  margin: 0 0 1rem 0;
+}
+
+.feature-content {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Data Table Styles */
+.data-table-section {
+  margin: 2.5rem 0;
+}
+
+.table-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table-subheadline {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 1.5rem 0;
+  font-style: italic;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.data-table th {
+  background: #f8f9fa;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e5e5e5;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.data-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.data-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.retailer-name {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.price {
+  font-weight: 600;
+  color: #e81c30;
+  text-align: right;
+}
+
+.table-note {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 1rem 0 0 0;
+  font-style: italic;
+  line-height: 1.5;
+}
