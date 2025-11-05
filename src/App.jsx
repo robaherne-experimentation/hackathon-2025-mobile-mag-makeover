@@ -10,7 +10,7 @@ import foodPricesArticleData from './data/article-how-to-beat-rising-food-prices
 
 // Import icons from lucide-react
 // Don't forget to run: npm install lucide-react
-import { Home, LayoutGrid, Heart, BookOpen, User, Search, Lock } from 'lucide-react';
+import { Home, LayoutGrid, Heart, BookOpen, User, Search, Lock, ChevronDown } from 'lucide-react';
 
 // --- Mock Data for Home Screen ---
 const popularCategories = [
@@ -176,37 +176,115 @@ function App() {
                 {article.sections.map((section, index) => {
                   switch (section.section_type) {
                     case 'main_article':
-                      return (
-                        <div key={index} className="article-section">
-                          <h1 className="article-headline">{section.headline}</h1>
-                          {section.subheadline && (
-                            <p className="article-subheadline">{section.subheadline}</p>
-                          )}
-                          {section.image && (
-                            <img 
-                              src={section.image} 
-                              alt={section.headline}
-                              className="article-main-image"
-                              onError={(e) => e.target.src = 'https://placehold.co/800x400/f0f0f0/999?text=Article+Image'}
-                            />
-                          )}
-                          {section.author && (
-                            <p className="article-author">By {section.author}</p>
-                          )}
-                          {section.content && (
-                            <div className="article-text">
-                              {section.content.split('\n\n').map((paragraph, pIndex) => (
-                                <p key={pIndex}>{paragraph}</p>
-                              ))}
+                      if (index === 0) {
+                        // First main article with special layout
+                        return (
+                          <div key={index} className="article-section first-section">
+                            <div className="article-header-background">
+                              <h1 className="article-headline">{section.headline}</h1>
+                              {section.subheadline && (
+                                <p className="article-subheadline">{section.subheadline}</p>
+                              )}
+                              {section.author && (
+                                <p className="article-author">By {section.author}</p>
+                              )}
                             </div>
-                          )}
-                        </div>
-                      );
+                            {section.image && (
+                              <img 
+                                src={section.image} 
+                                alt={section.headline}
+                                className="article-main-image-fullwidth"
+                                onError={(e) => e.target.src = 'https://placehold.co/800x400/f0f0f0/999?text=Article+Image'}
+                              />
+                            )}
+                            
+                            {/* Quick Links Section */}
+                            <div className="quick-links-section">
+                              <h3 className="quick-links-header">Skip to</h3>
+                              <ul className="quick-links-list">
+                                {article.sections.slice(1).map((linkSection, linkIndex) => {
+                                  const actualIndex = linkIndex + 1; // +1 because we sliced from index 1
+                                  let linkText = '';
+                                  
+                                  // Determine the link text based on section type
+                                  if (linkSection.headline) {
+                                    linkText = linkSection.headline;
+                                  } else if (linkSection.title) {
+                                    linkText = linkSection.title;
+                                  } else {
+                                    // Fallback for sections without title or headline
+                                    switch (linkSection.section_type) {
+                                      case 'callout_box':
+                                        linkText = 'Key information';
+                                        break;
+                                      case 'feature_callout':
+                                        linkText = 'Feature';
+                                        break;
+                                      case 'data_table':
+                                        linkText = 'Data table';
+                                        break;
+                                      default:
+                                        linkText = `Section ${actualIndex + 1}`;
+                                    }
+                                  }
+                                  
+                                  // Format to sentence case (capitalize first letter, rest lowercase)
+                                  linkText = linkText.charAt(0).toUpperCase() + linkText.slice(1).toLowerCase();
+                                  
+                                  return (
+                                    <li key={linkIndex} className="quick-links-item">
+                                      <a href={`#section-${actualIndex}`} className="quick-links-link">
+                                        <ChevronDown className="quick-links-arrow" size={16} />
+                                        {linkText}
+                                      </a>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+                            
+                            <hr className="content-divider" />
+                            
+                            {section.content && (
+                              <div className="article-text with-drop-cap">
+                                {section.content.split('\n\n').map((paragraph, pIndex) => (
+                                  <p key={pIndex} className={pIndex === 0 ? 'first-paragraph' : ''}>
+                                    {paragraph}
+                                  </p>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      } else {
+                        // Other main articles
+                        return (
+                          <div key={index} className="article-section" id={`section-${index}`}>
+                            <h2 className="article-section-headline">
+                              {section.headline.charAt(0).toUpperCase() + section.headline.slice(1).toLowerCase()}
+                            </h2>
+                            {section.subheadline && (
+                              <p className="article-section-subheadline">{section.subheadline}</p>
+                            )}
+                            {section.content && (
+                              <div className="article-text with-drop-cap">
+                                {section.content.split('\n\n').map((paragraph, pIndex) => (
+                                  <p key={pIndex} className={pIndex === 0 ? 'first-paragraph' : ''}>
+                                    {paragraph}
+                                  </p>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      }
                     
                     case 'callout_box':
                       return (
                         <div key={index} className="callout-box">
-                          <h3 className="callout-title">{section.title}</h3>
+                          <h3 className="callout-title">
+                            {section.title.charAt(0).toUpperCase() + section.title.slice(1).toLowerCase()}
+                          </h3>
                           {section.content && (
                             <div className="callout-content">
                               {section.content.split('\n\n').map((paragraph, pIndex) => (
@@ -220,7 +298,9 @@ function App() {
                     case 'feature_callout':
                       return (
                         <div key={index} className="feature-callout">
-                          <h4 className="feature-title">{section.title}</h4>
+                          <h4 className="feature-title">
+                            {section.title.charAt(0).toUpperCase() + section.title.slice(1).toLowerCase()}
+                          </h4>
                           {section.content && (
                             <p className="feature-content">{section.content}</p>
                           )}
@@ -230,7 +310,9 @@ function App() {
                     case 'data_table':
                       return (
                         <div key={index} className="data-table-section">
-                          <h3 className="table-title">{section.title}</h3>
+                          <h3 className="table-title">
+                            {section.title.charAt(0).toUpperCase() + section.title.slice(1).toLowerCase()}
+                          </h3>
                           {section.subheadline && (
                             <p className="table-subheadline">{section.subheadline}</p>
                           )}
@@ -264,6 +346,21 @@ function App() {
                   }
                 })}
               </article>
+              
+              {/* Article Footer */}
+              <footer className="article-footer">
+                <div className="next-article-link">
+                  <button 
+                    className="next-article-button"
+                    onClick={() => {
+                      // For now, just go back to contents
+                      setSelectedArticleId(null);
+                    }}
+                  >
+                    Next article →
+                  </button>
+                </div>
+              </footer>
             </div>
           );
         }

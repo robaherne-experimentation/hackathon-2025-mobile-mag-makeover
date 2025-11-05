@@ -63,9 +63,66 @@
   font-display: swap;
 }
 
+/* --- National2 Font Declarations --- */
+@font-face {
+  font-family: 'National2';
+  src: url('/fonts/National2 copy/National2-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2';
+  src: url('/fonts/National2 copy/National2-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2';
+  src: url('/fonts/National2 copy/National2-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2';
+  src: url('/fonts/National2 copy/National2-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2';
+  src: url('/fonts/National2 copy/National2-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2';
+  src: url('/fonts/National2 copy/National2-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2';
+  src: url('/fonts/National2 copy/National2-Medium.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* --- Global App Styles --- */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'National2', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   background-color: #f0f2f5; /* Light gray background for the overall page */
   color: #1c1c1c;
@@ -909,10 +966,20 @@ body {
 }
 
 .article-subheadline {
+  font-family: 'National2', sans-serif;
   font-size: 1.25rem;
   color: #4a4a4a;
   margin: 0 0 1.5rem 0;
   font-weight: 400;
+  line-height: 1.4;
+}
+
+.article-section-subheadline {
+  font-family: 'National2', sans-serif;
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  margin: 0 0 2.5rem 0;
+  font-weight: 600;
   line-height: 1.4;
 }
 
@@ -927,6 +994,7 @@ body {
 }
 
 .article-author {
+  font-family: 'National2', sans-serif;
   font-size: 1rem;
   color: #666;
   margin: 0 0 2rem 0;
@@ -934,6 +1002,7 @@ body {
 }
 
 .article-text p {
+  font-family: 'National2', sans-serif;
   font-size: 1.125rem;
   color: #333;
   margin-bottom: 1.5rem;
@@ -943,26 +1012,30 @@ body {
 /* Callout Box Styles */
 .callout-box {
   background: #f8f9fa;
-  border-left: 4px solid #e81c30;
   padding: 1.5rem;
-  margin: 2rem 0;
-  border-radius: 0 8px 8px 0;
+  margin: 2rem -1.5rem;
+  border-radius: 0;
+  border-top: 4px solid #00649c;
+  padding-top: 2rem;
 }
 
 .callout-title {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #1a1a1a;
   margin: 0 0 1rem 0;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  width: 70%;
+  line-height: 1.2;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .callout-content p {
-  font-size: 1rem;
+  font-family: 'National2', sans-serif;
+  font-size: 1.125rem;
   color: #333;
   margin-bottom: 1rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .callout-content p:last-child {
@@ -976,6 +1049,8 @@ body {
   padding: 1.5rem;
   margin: 2rem 0;
   border-radius: 8px;
+  border-top: 4px solid #00649c;
+  padding-top: 2rem;
 }
 
 .feature-title {
@@ -986,6 +1061,7 @@ body {
 }
 
 .feature-content {
+  font-family: 'National2', sans-serif;
   font-size: 1rem;
   color: #333;
   margin: 0;
@@ -995,6 +1071,8 @@ body {
 /* Data Table Styles */
 .data-table-section {
   margin: 2.5rem 0;
+  border-top: 4px solid #00649c;
+  padding-top: 2rem;
 }
 
 .table-title {
@@ -1007,6 +1085,7 @@ body {
 }
 
 .table-subheadline {
+  font-family: 'National2', sans-serif;
   font-size: 1rem;
   color: #666;
   margin: 0 0 1.5rem 0;
@@ -1060,9 +1139,170 @@ body {
 }
 
 .table-note {
+  font-family: 'National2', sans-serif;
   font-size: 0.875rem;
   color: #666;
   margin: 1rem 0 0 0;
   font-style: italic;
   line-height: 1.5;
+}
+
+/* Article Header Background */
+.article-header-background {
+  background-color: rgba(0, 100, 156, 0.4);
+  padding: 1.5rem;
+  margin: -1.5rem -1.5rem 0 -1.5rem;
+  border-radius: 0;
+}
+
+.article-header-background .article-title {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 3.1rem;
+}
+
+.article-header-background .article-intro {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.article-header-background .article-author {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+}
+
+/* Full-width main image */
+.article-main-image-fullwidth {
+  width: calc(100% + 3rem);
+  max-width: calc(100% + 3rem);
+  margin: 0 -1.5rem 1rem 0;
+  border-radius: 0;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+  margin: 1rem 0 2rem 0;
+}
+
+.quick-links-header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 1rem 0;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.quick-links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quick-links-item {
+  margin-bottom: 0.75rem;
+}
+
+.quick-links-item:last-child {
+  margin-bottom: 0;
+}
+
+.quick-links-link {
+  display: flex;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.quick-links-link:hover {
+  color: #e81c30;
+  text-decoration: underline;
+}
+
+.quick-links-arrow {
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  color: #000;
+}
+
+/* Content Divider */
+.content-divider {
+  border: none;
+  height: 2px;
+  background-color: #00649c;
+  margin: 2rem 0;
+}
+
+/* Drop Cap Styling */
+.first-paragraph::first-letter {
+  float: left;
+  background-color: #000;
+  color: white;
+  font-size: 4rem;
+  line-height: 3.5rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.75rem 0.25rem 0;
+  font-weight: 700;
+  border-radius: 4px;
+  font-family: 'Tiempos Headline', serif;
+}
+
+/* Smooth scrolling for the entire document */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Article Footer */
+.article-footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 4px solid #00649c;
+  text-align: center;
+}
+
+.next-article-button {
+  background: #00649c;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'National2', sans-serif;
+}
+
+.next-article-button:hover {
+  background: #004d7a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 100, 156, 0.3);
+}
+
+/* Section anchors for quick links */
+.article-section {
+  scroll-margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 4px solid #00649c;
+  margin-top: 2rem;
+}
+
+/* Remove border from first section */
+.article-section.first-section {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Article section headlines (not the first one) */
+.article-section-headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  width: 70%;
+  line-height: 1.2;
 }
