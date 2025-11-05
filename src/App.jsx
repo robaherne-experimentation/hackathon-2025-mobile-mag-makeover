@@ -4,6 +4,7 @@ import { useState } from 'react';
 import './App.css';
 import articlesData from './data/articles.json';
 import magazinesData from './data/magazines.json';
+import magazineIssuesData from './data/magazine-issues.json';
 
 // Import icons from lucide-react
 // Don't forget to run: npm install lucide-react
@@ -23,6 +24,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState('home');
   const [savedArticles, setSavedArticles] = useState([]);
+  const [showMagazineDetails, setShowMagazineDetails] = useState(false);
 
   // Filter articles (retained for other tabs)
   const filteredArticles = (articlesData || []).filter(article =>
@@ -37,6 +39,16 @@ function App() {
         ? prev.filter(id => id !== articleId)
         : [...prev, articleId]
     );
+  };
+
+  // Generate year pills for the past 10 years
+  const generateYearPills = () => {
+    const currentYear = 2025;
+    const years = [];
+    for (let i = 0; i < 10; i++) {
+      years.push(currentYear - i);
+    }
+    return years;
   };
 
   const renderContent = () => {
@@ -141,27 +153,78 @@ function App() {
         );
       }
       case 'magazine':
-        return (
-          <div className="magazine-container">
-            <h2 className="page-title">Which? Magazines</h2>
-            <div className="magazines-grid">
-              {magazinesData.map(magazine => (
-                <div key={magazine.id} className="magazine-card">
-                  <div className="magazine-header">
-                    <h3 className="magazine-edition">{magazine.edition}</h3>
-                  </div>
-                  <img 
-                    src={magazine.image} 
-                    alt={magazine.edition}
-                    className="magazine-image"
-                    onError={(e) => e.target.src = 'https://placehold.co/200x300/f0f0f0/999?text=Magazine'}
-                  />
-                  <div className="magazine-date">{magazine.date}</div>
+        if (showMagazineDetails) {
+          return (
+            <div className="magazine-details-container">
+              <div className="magazine-details-header">
+                <button 
+                  className="back-button"
+                  onClick={() => setShowMagazineDetails(false)}
+                >
+                  ← Back
+                </button>
+                <h2 className="page-title">Which? Magazine</h2>
+              </div>
+              
+              {/* Year Pills */}
+              <div className="year-pills-container">
+                <div className="year-pills-scroll">
+                  {generateYearPills().map(year => (
+                    <button key={year} className="year-pill">
+                      {year}
+                    </button>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* Magazine Issues Grid */}
+              <div className="magazine-issues-grid">
+                {magazineIssuesData.map(issue => (
+                  <div key={issue.id} className="magazine-issue-card">
+                    <img 
+                      src={issue.image} 
+                      alt={issue.date}
+                      className="magazine-issue-image"
+                      onError={(e) => e.target.src = 'https://placehold.co/150x200/f0f0f0/999?text=Issue'}
+                    />
+                    <div className="magazine-issue-date">{issue.date}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        );
+          );
+        } else {
+          return (
+            <div className="magazine-container">
+              <h2 className="page-title">Which? Magazines</h2>
+              <div className="magazines-grid">
+                {magazinesData.map(magazine => (
+                  <div 
+                    key={magazine.id} 
+                    className="magazine-card"
+                    onClick={() => {
+                      if (magazine.edition === 'Which? Magazine') {
+                        setShowMagazineDetails(true);
+                      }
+                    }}
+                    style={{ cursor: magazine.edition === 'Which? Magazine' ? 'pointer' : 'default' }}
+                  >
+                    <div className="magazine-header">
+                      <h3 className="magazine-edition">{magazine.edition}</h3>
+                    </div>
+                    <img 
+                      src={magazine.image} 
+                      alt={magazine.edition}
+                      className="magazine-image"
+                      onError={(e) => e.target.src = 'https://placehold.co/200x300/f0f0f0/999?text=Magazine'}
+                    />
+                    <div className="magazine-date">{magazine.date}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        }
       case 'account':
         return (
           <div className="account-container">

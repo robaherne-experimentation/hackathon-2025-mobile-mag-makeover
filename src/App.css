@@ -425,3 +425,111 @@ body {
   color: #666;
   font-weight: 500;
 }
+
+/* --- Magazine Details Page Styles --- */
+.magazine-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.magazine-details-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #007bff;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #f0f2f5;
+}
+
+/* --- Year Pills Styles --- */
+.year-pills-container {
+  padding: 0 1rem;
+}
+
+.year-pills-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.75rem;
+  padding-bottom: 0.5rem;
+  /* Hide scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.year-pills-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.year-pill {
+  background-color: #f0f2f5;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.year-pill:hover {
+  background-color: #e0e2e5;
+}
+
+.year-pill:first-child {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* --- Magazine Issues Grid Styles --- */
+.magazine-issues-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.magazine-issue-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.magazine-issue-image {
+  width: 100%;
+  max-width: 100px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.magazine-issue-date {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 500;
+}

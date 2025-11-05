@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "image": "/magimages/novemebr.jpg",
+    "date": "November 2025"
+  },
+  {
+    "id": 2,
+    "image": "/magimages/october.jpg", 
+    "date": "October 2025"
+  },
+  {
+    "id": 3,
+    "image": "/magimages/september.jpg",
+    "date": "September 2025"
+  }
+]
