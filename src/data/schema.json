@@ -1,0 +1,111 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Which? Magazine Schema",
+    "type": "object",
+    "required": [
+        "articles"
+    ],
+    "properties": {
+        "articles": {
+            "type": "array",
+            "description": "Collection of articles in the magazine",
+            "items": {
+                "$ref": "#/definitions/article"
+            }
+        }
+    },
+    "definitions": {
+        "article": {
+            "type": "object",
+            "required": [
+                "title",
+                "sections"
+            ],
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "description": "Main article title"
+                },
+                "sections": {
+                    "type": "array",
+                    "description": "Article sections",
+                    "items": {
+                        "$ref": "#/definitions/section"
+                    }
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "required": [
+                "section_type"
+            ],
+            "properties": {
+                "section_type": {
+                    "type": "string",
+                    "enum": [
+                        "main_article",
+                        "sidebar",
+                        "callout_box",
+                        "news_item",
+                        "opinion_article",
+                        "feature_callout",
+                        "letters_section",
+                        "correction",
+                        "contact_info",
+                        "data_table"
+                    ],
+                    "description": "Type of section"
+                },
+                "title": {
+                    "type": "string",
+                    "description": "Section title"
+                },
+                "headline": {
+                    "type": "string",
+                    "description": "Section headline (used in main_article sections)"
+                },
+                "subheadline": {
+                    "type": "string",
+                    "description": "Subheading text"
+                },
+                "author": {
+                    "type": "string",
+                    "description": "Author name"
+                },
+                "content": {
+                    "type": "string",
+                    "description": "Main content text"
+                },
+                "note": {
+                    "type": "string",
+                    "description": "Additional notes for data tables"
+                },
+                "columns": {
+                    "type": "array",
+                    "description": "Column headers for data tables",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "table_data": {
+                    "type": "array",
+                    "description": "Data rows for tables",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "oneOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "number"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "articles": [
+        {
+            "title": "How to beat rising food prices",
+            "sections": [
+                {
+                    "section_type": "main_article",
+                    "headline": "How to beat rising food prices",
+                    "subheadline": "With food inflation taking off again, Ellie Simmonds sets out smarter ways to keep your grocery bill down",
+                    "author": "Ellie Simmonds",
+                    "content": "You don't need to be an economist to notice that grocery prices are rising again. While the worst of the cost of living crisis has eased, particularly when it comes to energy prices and interest rates, grocery prices remain high and are forecast to rise for the rest of the year.\n\nSo we've taken our pricing research to another level to find even smarter ways to help you tackle your food bill and fight back against inflation. We have surprising insights into the supermarket Aldi Price Match phenomenon, clever ways to spot shrinkflation, and alternative places to buy your groceries that can beat even Aldi's and Lidl's prices."
+                },
+                {
+                    "section_type": "main_article",
+                    "headline": "WHY ARE PRICES SO HIGH?",
+                    "content": "Food inflation wasn't really on the radar of most shoppers until around 2021, when Covid-related disruption, the war in Ukraine and other global supply issues sent it soaring.\n\nOur data showed supermarket food inflation peaking at a staggering 17% in the three months to the end of April 2023. It then started dropping until it bottomed out at 2.4% in August 2024. Since then, it's been steadily rising again, sitting at 5.4% as of the three months to the end of August 2025.\n\nOf course, because prices go up and then stay high, inflation has a compound effect – already high prices, rising again and again.\n\nSo what's driving inflation back up? The increasing global wholesale prices of products such as beef, coffee and cocoa is playing a big part, often because of poor weather or harvests.\n\nBut food inflation has also recently risen more in the UK than elsewhere in Europe. The Bank of England says this shows higher labour costs (rises in the minimum wage and employers' National Insurance contributions) could have had an effect, too. There are also new UK regulations on packaging waste that may have an impact.\n\nSo what can you do as a shopper? Well, inflation isn't equally spread out – it varies depending on what type of groceries you buy and where you shop. Our unique Supermarket Inflation Tracker reveals these nuances at which.co.uk/supermarketfoodinflation.\n\nRecently, chocolate has seen the highest inflation, up 16.7% across the past year. Meanwhile, cereals, yoghurts, crisps and vegetables are up 3.4% or less. So switching your chosen treats could help."
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "FIND THE CHEAPEST GROCERIES",
+                    "content": "Every month, we compare thousands of prices at eight of the UK's major supermarkets – Aldi, Asda, Lidl, Morrisons, Ocado, Sainsbury's, Tesco and Waitrose – to reveal the cheapest for a short and long list of groceries at which.co.uk/cheapestsupermarket.\n\nSwitching from Waitrose, the priciest supermarket, to Aldi (the cheapest for most of the past two years) could save you a whopping 27% according to our most recent analysis.\n\nJoining a loyalty scheme can also make a difference – with savings of around 7% on a large trolley of popular groceries at Tesco and Sainsbury's. Don't feel pressured, though. It's worth remembering that the cheapest supermarket, Aldi, doesn't have a loyalty scheme at all."
+                },
+                {
+                    "section_type": "main_article",
+                    "headline": "SUPERMARKET PRICING",
+                    "subheadline": "You can shield yourself from the worst of the price rises by carefully choosing where you shop",
+                    "content": "Shop elsewhere\n\nOur latest research reveals that you could find savings by looking beyond the usual supermarkets.\n\nHome Bargains and B&M are two of the biggest non-supermarket discounters that sell groceries.\n\nWe looked at the average price of 256 everyday branded products – from Tetley tea to John West tuna – at Home Bargains and B&M and compared them to six major supermarket chains (all those mentioned earlier except Aldi and Lidl).\n\nHome Bargains was the cheapest at £636 – 24% less than the priciest supermarket, Sainsbury's, where they were £841 if you didn't have a Nectar card (£755 if you did). B&M came in second-cheapest, at £669. Seventeen of the products were also available at Aldi and Lidl. Home Bargains was also cheaper than these supermarkets for the shorter list.\n\nSome price differences are jaw-dropping – see overleaf for examples.\n\nSome products in variety retailers may also be on offer to clear stock nearing the end of its shelf life or not as widely available as they are in supermarkets."
+                },
+                {
+                    "section_type": "feature_callout",
+                    "title": "Why is Home Bargains so cheap?",
+                    "content": "Home Bargains' strapline is 'Top Brands, Bottom Prices'. Managers are given freedom to arrange shelves as they see fit, without the prescriptive plans used by other retailers. This is said to help with efficiency and stock availability. It has highly automated warehouses and invests little in advertising.\n\nHome Bargains has more than 600 stores and sells everything from food and drink to gardening products. It stocks many of the big-brand groceries available at more conventional supermarkets, and some stores also offer fresh food."
+                },
+                {
+                    "section_type": "data_table",
+                    "title": "CHEAPEST RETAILERS FOR GROCERIES",
+                    "subheadline": "Average price for 17 items",
+                    "columns": [
+                        "Retailer",
+                        "Average price"
+                    ],
+                    "table_data": [
+                        {
+                            "Retailer": "Home Bargains",
+                            "Average price": "£44.55"
+                        },
+                        {
+                            "Retailer": "Tesco (with Clubcard)",
+                            "Average price": "£45.92"
+                        },
+                        {
+                            "Retailer": "Lidl",
+                            "Average price": "£46.50"
+                        },
+                        {
+                            "Retailer": "Asda",
+                            "Average price": "£46.96"
+                        },
+                        {
+                            "Retailer": "Aldi",
+                            "Average price": "£47.29"
+                        },
+                        {
+                            "Retailer": "B&M",
+                            "Average price": "£47.62"
+                        },
+                        {
+                            "Retailer": "Tesco",
+                            "Average price": "£47.65"
+                        },
+                        {
+                            "Retailer": "Morrisons (with More)",
+                            "Average price": "£47.90"
+                        },
+                        {
+                            "Retailer": "Ocado",
+                            "Average price": "£49.42"
+                        },
+                        {
+                            "Retailer": "Sainsbury's (with Nectar)",
+                            "Average price": "£49.79"
+                        },
+                        {
+                            "Retailer": "Morrisons",
+                            "Average price": "£49.97"
+                        },
+                        {
+                            "Retailer": "Sainsbury's",
+                            "Average price": "£50.11"
+                        },
+                        {
+                            "Retailer": "Waitrose",
+                            "Average price": "£52.58"
+                        }
+                    ],
+                    "note": "Prices are three-month averages from April to July 2025 and include regular discounts, plus multibuys and, where indicated, loyalty discounts. Ocado's Price Promise offers customers a voucher for the difference with Tesco on many items. Data from an independent supplier."
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "10 YEARS OF FOOD INFLATION",
+                    "subheadline": "Food prices were relatively stable until the end of 2021",
+                    "note": "Data from the ONS Consumer Price Index for Food (2015 = 100)"
+                }
+            ]
+        }
+    ]
+}

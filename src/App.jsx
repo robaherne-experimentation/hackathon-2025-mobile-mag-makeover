@@ -191,7 +191,6 @@ function App() {
                   <div className="featured-article-content">
                     <h3 className="featured-article-title">{article.title}</h3>
                     <p className="featured-article-intro">{article.intro}</p>
-                    <p className="featured-article-subcopy">{article.subCopy}</p>
                   </div>
                 </div>
               ))}

@@ -6,9 +6,8 @@
       {
         "id": 1,
         "image": "/contentimages/Screenshot 2025-11-05 at 11.06.27.png",
-        "title": "The Future of Smart Home Technology",
-        "intro": "Exploring the latest innovations in connected devices and how they're transforming modern living.",
-        "subCopy": "From AI-powered assistants to energy-efficient appliances, discover which smart home gadgets are worth your investment and which ones to avoid.",
+        "title": "How to beat rising food prices",
+        "intro": "With food inflation taking off again, Ellie Simmonds sets out smarter ways to keep your grocery bill down",
         "isFeatured": true
       },
       {
@@ -57,7 +56,6 @@
         "image": "/contentimages/Screenshot 2025-11-05 at 13.04.08.png",
         "title": "Autumn Energy Saving Guide",
         "intro": "Simple changes that could slash hundreds off your heating bills this winter.",
-        "subCopy": "Our energy experts reveal the most effective ways to keep your home warm while reducing costs, from smart thermostats to insulation upgrades.",
         "isFeatured": true
       },
       {
@@ -106,7 +104,6 @@
         "image": "/contentimages/Screenshot 2025-11-05 at 11.07.52.png",
         "title": "Back to School Tech Guide",
         "intro": "Essential gadgets and software to help students succeed in the new academic year.",
-        "subCopy": "From budget tablets to productivity apps, we've tested everything students need for digital learning without breaking the bank.",
         "isFeatured": true
       },
       {
