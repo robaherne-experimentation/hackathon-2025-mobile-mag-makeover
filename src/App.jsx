@@ -170,7 +170,9 @@ function App() {
     <div className="app">
       {/* --- NEW Header (matches screenshot) --- */}
       <header className="app-header">
-        <div className="app-logo">Which?</div>
+        <div className="app-logo">
+          <img src="/Which logo.png" alt="Which Logo" className="which-logo" />
+        </div>
         <div className="search-bar-container">
           <Search className="search-icon" size={20} color="#555" />
           <input
