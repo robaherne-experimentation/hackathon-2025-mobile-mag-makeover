@@ -15,6 +15,7 @@ const popularCategories = [
   { name: 'Laptops', image: '/laptops.webp' },
   { name: 'Mattresses', image: '/mattress.webp' },
   { name: 'Headphones', image: '/headphones.webp' },
+  { name: 'Lifestyle', image: '/lifestyle.webp' },
 ];
 
 function App() {
