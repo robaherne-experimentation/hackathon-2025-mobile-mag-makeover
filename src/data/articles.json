@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "The Future of Mobile Technology",
+    "excerpt": "Exploring the latest trends in mobile development and what's coming next in the tech world.",
+    "author": "Sarah Johnson",
+    "date": "2025-11-01",
+    "category": "Technology",
+    "image": "https://via.placeholder.com/400x200/4A90E2/ffffff?text=Mobile+Technology",
+    "readTime": "5 min read"
+  },
+  {
+    "id": 2,
+    "title": "Design Trends for 2025",
+    "excerpt": "A comprehensive look at the design patterns that are shaping modern user experiences.",
+    "author": "Michael Chen",
+    "date": "2025-10-28",
+    "category": "Design",
+    "image": "https://via.placeholder.com/400x200/E94B3C/ffffff?text=Design+Trends",
+    "readTime": "7 min read"
+  },
+  {
+    "id": 3,
+    "title": "Building Scalable Web Apps",
+    "excerpt": "Best practices for creating web applications that can handle millions of users.",
+    "author": "Emily Davis",
+    "date": "2025-10-25",
+    "category": "Development",
+    "image": "https://via.placeholder.com/400x200/6FCF97/ffffff?text=Web+Development",
+    "readTime": "10 min read"
+  },
+  {
+    "id": 4,
+    "title": "The Art of User Research",
+    "excerpt": "Understanding your users is key to building products they love. Here's how to do it right.",
+    "author": "David Martinez",
+    "date": "2025-10-22",
+    "category": "UX Research",
+    "image": "https://via.placeholder.com/400x200/F7B731/ffffff?text=UX+Research",
+    "readTime": "6 min read"
+  },
+  {
+    "id": 5,
+    "title": "Cybersecurity in the Modern Age",
+    "excerpt": "Protecting your digital assets has never been more important. Learn the essentials.",
+    "author": "Jennifer Lee",
+    "date": "2025-10-20",
+    "category": "Security",
+    "image": "https://via.placeholder.com/400x200/8E44AD/ffffff?text=Cybersecurity",
+    "readTime": "8 min read"
+  }
+]
