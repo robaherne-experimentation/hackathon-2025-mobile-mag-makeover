@@ -89,7 +89,7 @@ function App() {
             <section className="home-section">
                <div className="article-card">
                  <img 
-                    src="https://placehold.co/600x400/bbb/666?text=Lifestyle+Image" 
+                    src="/lifestyle.webp" 
                     alt="Article"
                     className="article-image"
                     onError={(e) => e.target.src = 'https://placehold.co/600x400/f0f0f0/999?text=Image'}
