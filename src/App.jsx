@@ -82,6 +82,39 @@ function App() {
               </div>
             </section>
 
+            {/* New Magazine Announcement */}
+            <section className="home-section">
+              <div className="magazine-announcement">
+                <div className="magazine-announcement-content">
+                  <div className="magazine-announcement-text">
+                    <h3 className="magazine-announcement-title">
+                      New Magazine Available
+                    </h3>
+                    <p className="magazine-announcement-subtitle">
+                      November 2025 issue is here with expert reviews and buying advice
+                    </p>
+                    <button 
+                      className="magazine-cta-button"
+                      onClick={() => {
+                        setActiveTab('magazine');
+                        setSelectedIssueId(1); // November 2025 issue
+                      }}
+                    >
+                      Read magazine
+                    </button>
+                  </div>
+                  <div className="magazine-announcement-image">
+                    <img 
+                      src="/magimages/novemebr.jpg" 
+                      alt="November 2025 Magazine Cover" 
+                      className="magazine-cover-image"
+                      onError={(e) => e.target.src = 'https://placehold.co/200x300/f0f0f0/999?text=Magazine+Cover'}
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+
             {/* Promo Card Section */}
             <section className="home-section">
               <div className="promo-card">
