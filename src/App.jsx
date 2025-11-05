@@ -1,152 +1,186 @@
-import { useState } from 'react'
-import { SearchField, Card, Flex, Text, Badge, View } from '@aws-amplify/ui-react'
-import '@aws-amplify/ui-react/styles.css'
-import './App.css'
-import articlesData from './data/articles.json'
+import { useState } from 'react';
+// We've removed Amplify UI to fix errors and simplify.
+// We will use standard HTML tags (div, p, etc.) and style them in App.css
+import './App.css';
+import articlesData from './data/articles.json';
+
+// Import icons from lucide-react
+// Don't forget to run: npm install lucide-react
+import { Home, LayoutGrid, Heart, BookOpen, User, Search } from 'lucide-react';
+
+// --- Mock Data for Home Screen ---
+const popularCategories = [
+  { name: 'TVs', image: 'https://placehold.co/100x100/e0e0e0/333?text=TV' },
+  { name: 'Washing machines', image: 'https://placehold.co/100x100/e0e0e0/333?text=Washer' },
+  { name: 'Laptops', image: 'https://placehold.co/100x100/e0e0e0/333?text=Laptop' },
+  { name: 'Mattresses', image: 'https://placehold.co/100x100/e0e0e0/333?text=Mattress' },
+  { name: 'Headphones', image: 'https://placehold.co/100x100/e0e0e0/333?text=Audio' },
+];
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [activeTab, setActiveTab] = useState('home')
-  const [savedArticles, setSavedArticles] = useState([])
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeTab, setActiveTab] = useState('home');
+  const [savedArticles, setSavedArticles] = useState([]);
 
-  // Filter articles based on search query
-  const filteredArticles = articlesData.filter(article =>
+  // Filter articles (retained for other tabs)
+  const filteredArticles = (articlesData || []).filter(article =>
     article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
     article.category.toLowerCase().includes(searchQuery.toLowerCase())
-  )
+  );
 
   const toggleSaveArticle = (articleId) => {
     setSavedArticles(prev => 
       prev.includes(articleId) 
         ? prev.filter(id => id !== articleId)
         : [...prev, articleId]
-    )
-  }
+    );
+  };
 
   const renderContent = () => {
     switch (activeTab) {
       case 'home':
+        // --- NEW Home Content (matches screenshot) ---
         return (
-          <div className="articles-container">
-            {filteredArticles.map(article => (
-              <Card key={article.id} className="article-card">
+          <div className="home-container">
+            {/* Popular Categories Section */}
+            <section className="home-section">
+              <div className="home-section-header">
+                <h2>Popular categories</h2>
+                <a href="#">See all</a>
+              </div>
+              <div className="categories-scroll-container">
+                {popularCategories.map(category => (
+                  <div key={category.name} className="category-item">
+                    <img 
+                      src={category.image} 
+                      alt={category.name} 
+                      className="category-item-image"
+                      onError={(e) => e.target.src = 'https://placehold.co/100x100/f0f0f0/999?text=Image'}
+                    />
+                    <p>{category.name}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Promo Card Section */}
+            <section className="home-section">
+              <div className="promo-card">
                 <img 
-                  src={article.image} 
-                  alt={article.title}
-                  className="article-image"
+                  src="https://placehold.co/600x400/ccc/666?text=Promo+Image" 
+                  alt="We put people over profit" 
+                  className="promo-card-image"
+                  onError={(e) => e.target.src = 'https://placehold.co/600x400/f0f0f0/999?text=Image'}
                 />
-                <View padding="1rem">
-                  <Flex direction="row" justifyContent="space-between" alignItems="start">
-                    <Badge variation="info">{article.category}</Badge>
-                    <Text fontSize="0.875rem" color="gray">{article.readTime}</Text>
-                  </Flex>
-                  <Text fontSize="1.25rem" fontWeight="bold" marginTop="0.5rem">
-                    {article.title}
-                  </Text>
-                  <Text marginTop="0.5rem" color="gray">
-                    {article.excerpt}
-                  </Text>
-                  <Flex direction="row" justifyContent="space-between" alignItems="center" marginTop="1rem">
-                    <Text fontSize="0.875rem" color="gray">
-                      By {article.author} • {article.date}
-                    </Text>
-                    <button 
-                      className={`save-btn ${savedArticles.includes(article.id) ? 'saved' : ''}`}
-                      onClick={() => toggleSaveArticle(article.id)}
-                    >
-                      {savedArticles.includes(article.id) ? '❤️' : '🤍'}
-                    </button>
-                  </Flex>
-                </View>
-              </Card>
-            ))}
+                <div className="promo-card-content">
+                  <h3 className="promo-card-title">
+                    We put people over profit, making sure you always have a choice
+                  </h3>
+                  <button className="promo-button">
+                    See it in action
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            {/* Placeholder for the second image card */}
+            <section className="home-section">
+               <div className="article-card">
+                 <img 
+                    src="https://placehold.co/600x400/bbb/666?text=Lifestyle+Image" 
+                    alt="Article"
+                    className="article-image"
+                    onError={(e) => e.target.src = 'https://placehold.co/600x400/f0f0f0/999?text=Image'}
+                  />
+               </div>
+            </section>
           </div>
-        )
+        );
       case 'categories':
+        const allCategories = [...new Set(articlesData.map(a => a.category))];
         return (
           <div className="categories-container">
-            <Text fontSize="1.5rem" fontWeight="bold" marginBottom="1rem">Categories</Text>
-            {['Technology', 'Design', 'Development', 'UX Research', 'Security'].map(category => (
-              <Card key={category} className="category-card">
-                <Text fontSize="1.125rem" fontWeight="600">{category}</Text>
-                <Text fontSize="0.875rem" color="gray">
+            <h2 className="page-title">Categories</h2>
+            {allCategories.map(category => (
+              <div key={category} className="category-card">
+                <p className="category-card-title">{category}</p>
+                <p className="category-card-count">
                   {articlesData.filter(a => a.category === category).length} articles
-                </Text>
-              </Card>
+                </p>
+              </div>
             ))}
           </div>
-        )
+        );
       case 'saved': {
-        const savedArticlesList = articlesData.filter(a => savedArticles.includes(a.id))
+        const savedArticlesList = articlesData.filter(a => savedArticles.includes(a.id));
         return (
           <div className="saved-container">
-            <Text fontSize="1.5rem" fontWeight="bold" marginBottom="1rem">Saved Articles</Text>
+            <h2 className="page-title">Saved Articles</h2>
             {savedArticlesList.length === 0 ? (
-              <Text color="gray">No saved articles yet</Text>
+              <p className="empty-state-text">No saved articles yet</p>
             ) : (
               savedArticlesList.map(article => (
-                <Card key={article.id} className="article-card-compact">
-                  <Flex direction="row" gap="1rem">
+                <div key={article.id} className="article-card-compact">
                     <img 
                       src={article.image} 
                       alt={article.title}
                       className="article-image-small"
+                      onError={(e) => e.target.src = 'https://placehold.co/80x80/f0f0f0/999?text=Image'}
                     />
-                    <View flex="1">
-                      <Text fontSize="1rem" fontWeight="bold">{article.title}</Text>
-                      <Text fontSize="0.75rem" color="gray">{article.author}</Text>
-                    </View>
-                  </Flex>
-                </Card>
+                    <div className="article-card-compact-content">
+                      <p className="article-card-compact-title">{article.title}</p>
+                      <p className="article-card-compact-author">{article.author}</p>
+                    </div>
+                </div>
               ))
             )}
           </div>
-        )
+        );
       }
       case 'magazine':
         return (
           <div className="magazine-container">
-            <Text fontSize="1.5rem" fontWeight="bold" marginBottom="1rem">Magazine</Text>
-            <Card>
-              <Text fontSize="1.125rem" fontWeight="600" marginBottom="0.5rem">Latest Issue</Text>
-              <Text color="gray">November 2025 Edition</Text>
-              <Text marginTop="1rem">
+            <h2 className="page-title">Magazine</h2>
+            <div className="content-card">
+              <p className="content-card-title">Latest Issue</p>
+              <p className="content-card-subtitle">November 2025 Edition</p>
+              <p className="content-card-body">
                 Discover the latest trends, insights, and stories from the world of technology and design.
-              </Text>
-            </Card>
+              </p>
+            </div>
           </div>
-        )
+        );
       case 'account':
         return (
           <div className="account-container">
-            <Text fontSize="1.5rem" fontWeight="bold" marginBottom="1rem">Account</Text>
-            <Card>
-              <Text fontSize="1.125rem" fontWeight="600" marginBottom="0.5rem">Profile Settings</Text>
-              <Text color="gray">Manage your account preferences and settings.</Text>
-            </Card>
+            <h2 className="page-title">Account</h2>
+            <div className="content-card">
+              <p className="content-card-title">Profile Settings</p>
+              <p className="content-card-subtitle">Manage your account preferences and settings.</p>
+            </div>
           </div>
-        )
+        );
       default:
-        return null
+        return null;
     }
-  }
+  };
 
   return (
     <div className="app">
-      {/* Header with Search */}
+      {/* --- NEW Header (matches screenshot) --- */}
       <header className="app-header">
-        <Text fontSize="1.5rem" fontWeight="bold" marginBottom="1rem">Mobile Magazine</Text>
-        <SearchField
-          label="Search"
-          labelHidden
-          placeholder="Search articles..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          onClear={() => setSearchQuery('')}
-          hasSearchButton={false}
-          hasSearchIcon={true}
-        />
+        <div className="app-logo">Which?</div>
+        <div className="search-bar-container">
+          <Search className="search-icon" size={20} color="#555" />
+          <input
+            type="text"
+            placeholder="Search for reviews or advice"
+            className="search-input"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
       </header>
 
       {/* Main Content */}
@@ -154,46 +188,48 @@ function App() {
         {renderContent()}
       </main>
 
-      {/* Sticky Bottom Navigation */}
+      {/* --- NEW Sticky Bottom Navigation (matches screenshot) --- */}
       <nav className="bottom-nav">
         <button 
           className={`nav-item ${activeTab === 'home' ? 'active' : ''}`}
           onClick={() => setActiveTab('home')}
         >
-          <span className="nav-icon">🏠</span>
+          <Home className="nav-icon" strokeWidth={activeTab === 'home' ? 2.5 : 2} />
           <span className="nav-label">Home</span>
         </button>
         <button 
           className={`nav-item ${activeTab === 'categories' ? 'active' : ''}`}
           onClick={() => setActiveTab('categories')}
         >
-          <span className="nav-icon">📑</span>
+          <LayoutGrid className="nav-icon" strokeWidth={activeTab === 'categories' ? 2.5 : 2} />
           <span className="nav-label">Categories</span>
         </button>
         <button 
           className={`nav-item ${activeTab === 'saved' ? 'active' : ''}`}
           onClick={() => setActiveTab('saved')}
         >
-          <span className="nav-icon">❤️</span>
+          <Heart className="nav-icon" strokeWidth={activeTab === 'saved' ? 2.5 : 2} />
           <span className="nav-label">Saved</span>
         </button>
         <button 
           className={`nav-item ${activeTab === 'magazine' ? 'active' : ''}`}
           onClick={() => setActiveTab('magazine')}
         >
-          <span className="nav-icon">📖</span>
+          <BookOpen className="nav-icon" strokeWidth={activeTab === 'magazine' ? 2.5 : 2} />
           <span className="nav-label">Magazine</span>
         </button>
         <button 
           className={`nav-item ${activeTab === 'account' ? 'active' : ''}`}
           onClick={() => setActiveTab('account')}
         >
-          <span className="nav-icon">👤</span>
+          <User className="nav-icon" strokeWidth={activeTab === 'account' ? 2.5 : 2} />
           <span className="nav-label">Account</span>
         </button>
       </nav>
+      {/* Home indicator bar for modern phones */}
+      <div className="home-indicator-bar"></div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
