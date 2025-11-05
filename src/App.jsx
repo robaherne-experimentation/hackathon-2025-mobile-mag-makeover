@@ -3,6 +3,7 @@ import { useState } from 'react';
 // We will use standard HTML tags (div, p, etc.) and style them in App.css
 import './App.css';
 import articlesData from './data/articles.json';
+import magazinesData from './data/magazines.json';
 
 // Import icons from lucide-react
 // Don't forget to run: npm install lucide-react
@@ -142,13 +143,22 @@ function App() {
       case 'magazine':
         return (
           <div className="magazine-container">
-            <h2 className="page-title">Magazine</h2>
-            <div className="content-card">
-              <p className="content-card-title">Latest Issue</p>
-              <p className="content-card-subtitle">November 2025 Edition</p>
-              <p className="content-card-body">
-                Discover the latest trends, insights, and stories from the world of technology and design.
-              </p>
+            <h2 className="page-title">Which? Magazines</h2>
+            <div className="magazines-grid">
+              {magazinesData.map(magazine => (
+                <div key={magazine.id} className="magazine-card">
+                  <div className="magazine-header">
+                    <h3 className="magazine-edition">{magazine.edition}</h3>
+                  </div>
+                  <img 
+                    src={magazine.image} 
+                    alt={magazine.edition}
+                    className="magazine-image"
+                    onError={(e) => e.target.src = 'https://placehold.co/200x300/f0f0f0/999?text=Magazine'}
+                  />
+                  <div className="magazine-date">{magazine.date}</div>
+                </div>
+              ))}
             </div>
           </div>
         );

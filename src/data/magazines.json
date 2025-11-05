@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "edition": "Which? Magazine",
+    "image": "/magimages/editions/november_which.jpg",
+    "date": "November 2025"
+  },
+  {
+    "id": 2,
+    "edition": "Which? Gardening",
+    "image": "/magimages/editions/december_gardening.png",
+    "date": "December 2025"
+  },
+  {
+    "id": 3,
+    "edition": "Which? Travel",
+    "image": "/magimages/editions/november_travel.png",
+    "date": "November 2025"
+  },
+  {
+    "id": 4,
+    "edition": "Which? Money",
+    "image": "/magimages/editions/october_money.png",
+    "date": "October 2025"
+  },
+  {
+    "id": 5,
+    "edition": "Which? Tech",
+    "image": "/magimages/editions/october_tech.png",
+    "date": "October 2025"
+  }
+]
