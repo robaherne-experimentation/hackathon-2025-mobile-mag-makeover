@@ -1,3 +1,68 @@
+/* --- Tiempos Font Declarations --- */
+@font-face {
+  font-family: 'Tiempos';
+  src: url('/fonts/TIEMPOS/TIEMPOSTEXT-REGULAR.OTF') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  src: url('/fonts/TIEMPOS/TIEMPOSTEXT-REGULARITALIC.OTF') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  src: url('/fonts/TIEMPOS/TIEMPOSTEXT-MEDIUM.OTF') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  src: url('/fonts/TIEMPOS/TIEMPOSTEXT-MEDIUMITALIC.OTF') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  src: url('/fonts/TIEMPOS/TIEMPOSTEXT-SEMIBOLD.OTF') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  src: url('/fonts/TIEMPOS/TIEMPOSTEXT-BOLD.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  src: url('/fonts/TIEMPOS/TIEMPOSHEADLINE-REGULAR.OTF') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  src: url('/fonts/TIEMPOS/TIEMPOSHEADLINE-BOLD.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* --- Global App Styles --- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -378,6 +443,13 @@ body {
    /* .home-indicator-bar { display: block; } */
 }
 
+/* --- Magazine Pages Font --- */
+.magazine-container,
+.magazine-details-container,
+.magazine-contents-container {
+  font-family: 'Tiempos', serif;
+}
+
 /* --- Magazine Grid Styles --- */
 .magazines-grid {
   display: grid;
@@ -424,6 +496,121 @@ body {
   font-size: 0.875rem;
   color: #666;
   font-weight: 500;
+}
+
+/* --- Locked Magazine Styles --- */
+.magazine-card.locked .magazine-edition {
+  color: #000; /* Solid black titles for locked magazines */
+}
+
+.magazine-card.locked .magazine-date {
+  color: #666;
+}
+
+.magazine-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Remove grayscale filter - keep images normal with just dark overlay */
+
+.magazine-lock-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.magazine-lock-icon {
+  color: white;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* --- Locked Magazine Info Container --- */
+.magazine-locked-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.magazine-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.subscribe-button {
+  background-color: #e81c30;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  max-width: 100px;
+}
+
+.subscribe-button:hover {
+  background-color: #c41525;
+}
+
+/* --- Magazine Actions for Unlocked Magazines --- */
+.magazine-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+.read-button {
+  background-color: white;
+  color: black;
+  border: 2px solid #e81c30;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  max-width: 120px;
+  white-space: nowrap;
+}
+
+.read-button:hover {
+  background-color: #f8f8f8;
+  border-color: #c41525;
+}
+
+.archive-link {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;
+  transition: color 0.2s;
+}
+
+.archive-link:hover {
+  color: #0056b3;
 }
 
 /* --- Magazine Details Page Styles --- */
@@ -554,9 +741,47 @@ body {
 
 .magazine-contents-header {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 1rem;
   padding: 0 1rem;
+}
+
+.contents-title-section {
+  width: 100%;
+}
+
+.contents-label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+}
+
+.red-period {
+  color: #e81c30;
+}
+
+.edition-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.25rem 0;
+  color: #000;
+  line-height: 1.2;
+}
+
+.edition-subtitle {
+  font-size: 1.125rem;
+  color: #666;
+  margin: 0 0 1.5rem 0;
+  font-weight: 400;
+}
+
+.contents-divider {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 0 0 1.5rem 0;
 }
 
 /* Featured Article Styles */

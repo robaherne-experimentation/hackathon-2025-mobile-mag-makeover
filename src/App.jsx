@@ -9,7 +9,7 @@ import magazineContentsData from './data/magazine-contents.json';
 
 // Import icons from lucide-react
 // Don't forget to run: npm install lucide-react
-import { Home, LayoutGrid, Heart, BookOpen, User, Search } from 'lucide-react';
+import { Home, LayoutGrid, Heart, BookOpen, User, Search, Lock } from 'lucide-react';
 
 // --- Mock Data for Home Screen ---
 const popularCategories = [
@@ -169,7 +169,14 @@ function App() {
                 >
                   ← Back
                 </button>
-                <h2 className="page-title">Contents - {issueContent.issueDate}</h2>
+                <div className="contents-title-section">
+                  <h1 className="contents-label">
+                    Contents<span className="red-period">.</span>
+                  </h1>
+                  <h2 className="edition-title">Which? Magazine</h2>
+                  <p className="edition-subtitle">{issueContent.issueDate}</p>
+                  <hr className="contents-divider" />
+                </div>
               </div>
 
               {/* Featured Article */}
@@ -261,29 +268,65 @@ function App() {
             <div className="magazine-container">
               <h2 className="page-title">Which? Magazines</h2>
               <div className="magazines-grid">
-                {magazinesData.map(magazine => (
-                  <div 
-                    key={magazine.id} 
-                    className="magazine-card"
-                    onClick={() => {
-                      if (magazine.edition === 'Which? Magazine') {
-                        setShowMagazineDetails(true);
-                      }
-                    }}
-                    style={{ cursor: magazine.edition === 'Which? Magazine' ? 'pointer' : 'default' }}
-                  >
-                    <div className="magazine-header">
-                      <h3 className="magazine-edition">{magazine.edition}</h3>
+                {magazinesData.map(magazine => {
+                  const isUnlocked = magazine.edition === 'Which? Magazine';
+                  return (
+                    <div 
+                      key={magazine.id} 
+                      className={`magazine-card ${!isUnlocked ? 'locked' : ''}`}
+                      onClick={() => {
+                        if (isUnlocked) {
+                          setShowMagazineDetails(true);
+                        }
+                      }}
+                      style={{ cursor: isUnlocked ? 'pointer' : 'default' }}
+                    >
+                      <div className="magazine-header">
+                        <h3 className="magazine-edition">{magazine.edition}</h3>
+                      </div>
+                      <div className="magazine-image-container">
+                        <img 
+                          src={magazine.image} 
+                          alt={magazine.edition}
+                          className="magazine-image"
+                          onError={(e) => e.target.src = 'https://placehold.co/200x300/f0f0f0/999?text=Magazine'}
+                        />
+                        {!isUnlocked && (
+                          <div className="magazine-lock-overlay">
+                            <Lock className="magazine-lock-icon" size={32} />
+                          </div>
+                        )}
+                      </div>
+                      {!isUnlocked ? (
+                        <div className="magazine-locked-info">
+                          <button className="subscribe-button">Subscribe</button>
+                          <div className="magazine-price">£4.99 a month</div>
+                        </div>
+                      ) : (
+                        <div className="magazine-actions">
+                          <button 
+                            className="read-button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setSelectedIssueId(1); // November 2025 issue (issueId: 1)
+                            }}
+                          >
+                            Read latest
+                          </button>
+                          <button 
+                            className="archive-link"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setShowMagazineDetails(true);
+                            }}
+                          >
+                            Archive
+                          </button>
+                        </div>
+                      )}
                     </div>
-                    <img 
-                      src={magazine.image} 
-                      alt={magazine.edition}
-                      className="magazine-image"
-                      onError={(e) => e.target.src = 'https://placehold.co/200x300/f0f0f0/999?text=Magazine'}
-                    />
-                    <div className="magazine-date">{magazine.date}</div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           );
@@ -305,22 +348,24 @@ function App() {
 
   return (
     <div className="app">
-      {/* --- NEW Header (matches screenshot) --- */}
-      <header className="app-header">
-        <div className="app-logo">
-          <img src="/Which logo.png" alt="Which Logo" className="which-logo" />
-        </div>
-        <div className="search-bar-container">
-          <Search className="search-icon" size={20} color="#555" />
-          <input
-            type="text"
-            placeholder="Search for reviews or advice"
-            className="search-input"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        </div>
-      </header>
+      {/* --- NEW Header (matches screenshot) --- Hide on magazine pages */}
+      {activeTab !== 'magazine' && (
+        <header className="app-header">
+          <div className="app-logo">
+            <img src="/Which logo.png" alt="Which Logo" className="which-logo" />
+          </div>
+          <div className="search-bar-container">
+            <Search className="search-icon" size={20} color="#555" />
+            <input
+              type="text"
+              placeholder="Search for reviews or advice"
+              className="search-input"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </header>
+      )}
 
       {/* Main Content */}
       <main className="app-content">
@@ -352,7 +397,11 @@ function App() {
         </button>
         <button 
           className={`nav-item ${activeTab === 'magazine' ? 'active' : ''}`}
-          onClick={() => setActiveTab('magazine')}
+          onClick={() => {
+            setActiveTab('magazine');
+            setShowMagazineDetails(false);
+            setSelectedIssueId(null);
+          }}
         >
           <BookOpen className="nav-icon" strokeWidth={activeTab === 'magazine' ? 2.5 : 2} />
           <span className="nav-label">Magazine</span>
