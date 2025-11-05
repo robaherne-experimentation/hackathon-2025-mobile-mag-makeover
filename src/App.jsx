@@ -5,6 +5,7 @@ import './App.css';
 import articlesData from './data/articles.json';
 import magazinesData from './data/magazines.json';
 import magazineIssuesData from './data/magazine-issues.json';
+import magazineContentsData from './data/magazine-contents.json';
 
 // Import icons from lucide-react
 // Don't forget to run: npm install lucide-react
@@ -25,6 +26,7 @@ function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [savedArticles, setSavedArticles] = useState([]);
   const [showMagazineDetails, setShowMagazineDetails] = useState(false);
+  const [selectedIssueId, setSelectedIssueId] = useState(null);
 
   // Filter articles (retained for other tabs)
   const filteredArticles = (articlesData || []).filter(article =>
@@ -153,7 +155,62 @@ function App() {
         );
       }
       case 'magazine':
-        if (showMagazineDetails) {
+        // Show contents page if an issue is selected
+        if (selectedIssueId) {
+          const issueContent = magazineContentsData.find(content => content.issueId === selectedIssueId);
+          if (!issueContent) return null;
+          
+          return (
+            <div className="magazine-contents-container">
+              <div className="magazine-contents-header">
+                <button 
+                  className="back-button"
+                  onClick={() => setSelectedIssueId(null)}
+                >
+                  ← Back
+                </button>
+                <h2 className="page-title">Contents - {issueContent.issueDate}</h2>
+              </div>
+
+              {/* Featured Article */}
+              {issueContent.articles.filter(article => article.isFeatured).map(article => (
+                <div key={article.id} className="featured-article">
+                  <img 
+                    src={article.image} 
+                    alt={article.title}
+                    className="featured-article-image"
+                    onError={(e) => e.target.src = 'https://placehold.co/400x250/f0f0f0/999?text=Article'}
+                  />
+                  <div className="featured-article-content">
+                    <h3 className="featured-article-title">{article.title}</h3>
+                    <p className="featured-article-intro">{article.intro}</p>
+                    <p className="featured-article-subcopy">{article.subCopy}</p>
+                  </div>
+                </div>
+              ))}
+
+              {/* Regular Articles Grid */}
+              <div className="articles-content-grid">
+                {issueContent.articles.filter(article => !article.isFeatured).map(article => (
+                  <div key={article.id} className="article-content-card">
+                    <img 
+                      src={article.image} 
+                      alt={article.title}
+                      className="article-content-image"
+                      onError={(e) => e.target.src = 'https://placehold.co/200x150/f0f0f0/999?text=Article'}
+                    />
+                    <div className="article-content-info">
+                      <h4 className="article-content-title">{article.title}</h4>
+                      <p className="article-content-intro">{article.intro}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        }
+        // Show magazine issues if details view is active
+        else if (showMagazineDetails) {
           return (
             <div className="magazine-details-container">
               <div className="magazine-details-header">
@@ -177,10 +234,14 @@ function App() {
                 </div>
               </div>
 
-              {/* Magazine Issues Grid */}
+              {/* Magazine Issues Grid - Now clickable */}
               <div className="magazine-issues-grid">
                 {magazineIssuesData.map(issue => (
-                  <div key={issue.id} className="magazine-issue-card">
+                  <div 
+                    key={issue.id} 
+                    className="magazine-issue-card clickable"
+                    onClick={() => setSelectedIssueId(issue.id)}
+                  >
                     <img 
                       src={issue.image} 
                       alt={issue.date}
@@ -193,7 +254,9 @@ function App() {
               </div>
             </div>
           );
-        } else {
+        } 
+        // Show magazines list (default view)
+        else {
           return (
             <div className="magazine-container">
               <h2 className="page-title">Which? Magazines</h2>

@@ -1,0 +1,149 @@
+[
+  {
+    "issueId": 1,
+    "issueDate": "November 2025",
+    "articles": [
+      {
+        "id": 1,
+        "image": "/contentimages/Screenshot 2025-11-05 at 11.06.27.png",
+        "title": "The Future of Smart Home Technology",
+        "intro": "Exploring the latest innovations in connected devices and how they're transforming modern living.",
+        "subCopy": "From AI-powered assistants to energy-efficient appliances, discover which smart home gadgets are worth your investment and which ones to avoid.",
+        "isFeatured": true
+      },
+      {
+        "id": 2,
+        "image": "/contentimages/Screenshot 2025-11-05 at 11.06.39.png",
+        "title": "Best Budget Laptops for 2025",
+        "intro": "Our comprehensive review of affordable laptops that don't compromise on performance.",
+        "isFeatured": false
+      },
+      {
+        "id": 3,
+        "image": "/contentimages/Screenshot 2025-11-05 at 11.06.59.png",
+        "title": "Electric Vehicle Charging Solutions",
+        "intro": "Everything you need to know about home charging stations and public infrastructure.",
+        "isFeatured": false
+      },
+      {
+        "id": 4,
+        "image": "/contentimages/Screenshot 2025-11-05 at 11.07.52.png",
+        "title": "Kitchen Appliances That Last",
+        "intro": "Durability testing reveals which brands offer the best value for money.",
+        "isFeatured": false
+      },
+      {
+        "id": 5,
+        "image": "/contentimages/Screenshot 2025-11-05 at 13.03.44.png",
+        "title": "Streaming Services Compared",
+        "intro": "Which platforms offer the best content and value in 2025?",
+        "isFeatured": false
+      },
+      {
+        "id": 6,
+        "image": "/contentimages/Screenshot 2025-11-05 at 13.03.53.png",
+        "title": "Home Security Systems Review",
+        "intro": "Professional monitoring vs DIY: what's right for your home?",
+        "isFeatured": false
+      }
+    ]
+  },
+  {
+    "issueId": 2,
+    "issueDate": "October 2025",
+    "articles": [
+      {
+        "id": 7,
+        "image": "/contentimages/Screenshot 2025-11-05 at 13.04.08.png",
+        "title": "Autumn Energy Saving Guide",
+        "intro": "Simple changes that could slash hundreds off your heating bills this winter.",
+        "subCopy": "Our energy experts reveal the most effective ways to keep your home warm while reducing costs, from smart thermostats to insulation upgrades.",
+        "isFeatured": true
+      },
+      {
+        "id": 8,
+        "image": "/contentimages/Screenshot 2025-11-05 at 13.04.37.png",
+        "title": "Smartphone Camera Test",
+        "intro": "Which phone takes the best photos in challenging conditions?",
+        "isFeatured": false
+      },
+      {
+        "id": 9,
+        "image": "/contentimages/Screenshot 2025-11-05 at 11.06.27 (1).png",
+        "title": "Winter Clothing Warmth Test",
+        "intro": "Laboratory testing reveals the warmest coats and jackets for cold weather.",
+        "isFeatured": false
+      },
+      {
+        "id": 10,
+        "image": "/contentimages/Screenshot 2025-11-05 at 11.06.27.png",
+        "title": "Coffee Machine Showdown",
+        "intro": "Bean-to-cup vs capsule: which delivers the perfect morning brew?",
+        "isFeatured": false
+      },
+      {
+        "id": 11,
+        "image": "/contentimages/Screenshot 2025-11-05 at 11.06.39.png",
+        "title": "Online Banking Security",
+        "intro": "How to protect your finances from the latest digital threats.",
+        "isFeatured": false
+      },
+      {
+        "id": 12,
+        "image": "/contentimages/Screenshot 2025-11-05 at 11.06.59.png",
+        "title": "Vacuum Cleaner Reliability",
+        "intro": "Five-year study reveals which brands break down most often.",
+        "isFeatured": false
+      }
+    ]
+  },
+  {
+    "issueId": 3,
+    "issueDate": "September 2025",
+    "articles": [
+      {
+        "id": 13,
+        "image": "/contentimages/Screenshot 2025-11-05 at 11.07.52.png",
+        "title": "Back to School Tech Guide",
+        "intro": "Essential gadgets and software to help students succeed in the new academic year.",
+        "subCopy": "From budget tablets to productivity apps, we've tested everything students need for digital learning without breaking the bank.",
+        "isFeatured": true
+      },
+      {
+        "id": 14,
+        "image": "/contentimages/Screenshot 2025-11-05 at 13.03.44.png",
+        "title": "Air Fryer Buying Guide",
+        "intro": "Healthy cooking made simple with our top-rated models.",
+        "isFeatured": false
+      },
+      {
+        "id": 15,
+        "image": "/contentimages/Screenshot 2025-11-05 at 13.03.53.png",
+        "title": "Internet Provider Comparison",
+        "intro": "Speed tests and customer service ratings across all major ISPs.",
+        "isFeatured": false
+      },
+      {
+        "id": 16,
+        "image": "/contentimages/Screenshot 2025-11-05 at 13.04.08.png",
+        "title": "Fitness Tracker Accuracy",
+        "intro": "Which wearables give the most reliable health data?",
+        "isFeatured": false
+      },
+      {
+        "id": 17,
+        "image": "/contentimages/Screenshot 2025-11-05 at 13.04.37.png",
+        "title": "Car Insurance Claims Test",
+        "intro": "How insurers really handle claims when you need them most.",
+        "isFeatured": false
+      },
+      {
+        "id": 18,
+        "image": "/contentimages/Screenshot 2025-11-05 at 11.06.27 (1).png",
+        "title": "Password Manager Review",
+        "intro": "Keep your accounts secure with these essential security tools.",
+        "isFeatured": false
+      }
+    ]
+  }
+]

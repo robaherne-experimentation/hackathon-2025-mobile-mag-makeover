@@ -516,6 +516,16 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.magazine-issue-card.clickable {
+  cursor: pointer;
+}
+
+.magazine-issue-card.clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .magazine-issue-image {
@@ -532,4 +542,104 @@ body {
   font-size: 0.875rem;
   color: #666;
   font-weight: 500;
+}
+
+/* --- Magazine Contents Page Styles --- */
+.magazine-contents-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.magazine-contents-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+/* Featured Article Styles */
+.featured-article {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 1rem;
+}
+
+.featured-article-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.featured-article-content {
+  padding: 1.5rem;
+}
+
+.featured-article-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  color: #333;
+  line-height: 1.3;
+}
+
+.featured-article-intro {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #555;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.4;
+}
+
+.featured-article-subcopy {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Regular Articles Grid */
+.articles-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.article-content-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.article-content-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.article-content-info {
+  padding: 1rem;
+  flex: 1;
+}
+
+.article-content-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  line-height: 1.3;
+}
+
+.article-content-intro {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
 }
