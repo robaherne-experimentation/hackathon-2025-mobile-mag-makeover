@@ -126,6 +126,7 @@ body {
   margin: 0;
   background-color: #f0f2f5; /* Light gray background for the overall page */
   color: #1c1c1c;
+  overflow-x: hidden;
 }
 
 .app {
@@ -138,6 +139,7 @@ body {
   background-color: #ffffff; /* Main app background is white */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   position: relative;
+  overflow-x: hidden;
 }
 
 /* --- NEW App Header (matches screenshot) --- */
@@ -809,6 +811,17 @@ body {
   border-color: #007bff;
 }
 
+.year-pill.active {
+  background-color: #00649c;
+  color: white;
+  border-color: #00649c;
+}
+
+.year-pill.active:hover {
+  background-color: #004d7a;
+  border-color: #004d7a;
+}
+
 /* --- Magazine Issues Grid Styles --- */
 .magazine-issues-grid {
   display: grid;
@@ -836,6 +849,15 @@ body {
 .magazine-issue-card.clickable:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.magazine-issue-card:not(.clickable) {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.magazine-issue-card:not(.clickable) .magazine-issue-date {
+  color: #999;
 }
 
 .magazine-issue-image {
@@ -1012,6 +1034,7 @@ body {
 }
 
 .article-content {
+  overflow-x: hidden;
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
@@ -1070,7 +1093,7 @@ body {
 .article-text p {
   font-family: 'National2', sans-serif;
   font-size: 1.125rem;
-  color: #333;
+  color: #000;
   margin-bottom: 1.5rem;
   line-height: 1.7;
 }
@@ -1088,7 +1111,7 @@ body {
 .callout-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #000;
   margin: 0 0 1rem 0;
   width: 70%;
   line-height: 1.2;
@@ -1099,7 +1122,7 @@ body {
 .callout-content p {
   font-family: 'National2', sans-serif;
   font-size: 1.125rem;
-  color: #333;
+  color: #000;
   margin-bottom: 1rem;
   line-height: 1.7;
 }
@@ -1129,7 +1152,7 @@ body {
 .feature-content {
   font-family: 'National2', sans-serif;
   font-size: 1rem;
-  color: #333;
+  color: #000;
   margin: 0;
   line-height: 1.6;
 }
@@ -1144,10 +1167,10 @@ body {
 .table-title {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #000;
   margin: 0 0 0.5rem 0;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .table-subheadline {
@@ -1174,7 +1197,7 @@ body {
 
 .data-table th {
   background: #f8f9fa;
-  padding: 1rem;
+  padding: 0.7rem;
   text-align: left;
   font-weight: 600;
   color: #333;
@@ -1182,11 +1205,15 @@ body {
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  font-family: 'National2', sans-serif;
 }
 
 .data-table td {
-  padding: 1rem;
+  padding: 0.7rem;
   border-bottom: 1px solid #e5e5e5;
+  font-family: 'National2', sans-serif;
+  font-feature-settings: "kern" 1;
+  unicode-bidi: normal;
 }
 
 .data-table tbody tr:hover {
@@ -1194,14 +1221,29 @@ body {
 }
 
 .retailer-name {
-  font-weight: 500;
-  color: #1a1a1a;
+  font-family: 'National2', sans-serif;
+  font-weight: 600;
+  color: #000;
 }
 
 .price {
-  font-weight: 600;
-  color: #e81c30;
+  font-family: 'National2', sans-serif;
+  font-weight: 400;
+  color: #000;
   text-align: right;
+}
+
+/* Star rating styling */
+.data-table td[data-stars], 
+.data-table td:has(★),
+.data-table td {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.data-table td ★ {
+  color: #ffa500;
+  font-size: 1.1rem;
 }
 
 .table-note {
@@ -1213,11 +1255,16 @@ body {
   line-height: 1.5;
 }
 
+/* Percentage highlighting */
+.percentage-red {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
 /* Article Header Background */
 .article-header-background {
-  background-color: rgba(0, 100, 156, 0.4);
   padding: 1.5rem;
-  margin: -1.5rem -1.5rem 0 -1.5rem;
+  margin: -2rem -1.5rem 0 -1.5rem;
   border-radius: 0;
 }
 
@@ -1313,12 +1360,44 @@ body {
   margin: 0 0.75rem 0.25rem 0;
   font-weight: 700;
   border-radius: 4px;
-  font-family: 'Tiempos Headline', serif;
+  font-family: 'National2', sans-serif;
 }
 
 /* Smooth scrolling for the entire document */
 html {
   scroll-behavior: smooth;
+}
+
+/* Sidebar Styles */
+.article-sidebar {
+  background: #f8f9fa;
+  border-left: 4px solid #00649c;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+  border-top: 4px solid #00649c;
+  padding-top: 2rem;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 1rem 0;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.sidebar-content p {
+  font-family: 'National2', sans-serif;
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.sidebar-content p:last-child {
+  margin-bottom: 0;
 }
 
 /* Article Footer */
@@ -1330,7 +1409,7 @@ html {
 }
 
 .next-article-button {
-  background: #00649c;
+  background: #1c1c1c;
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -1343,9 +1422,9 @@ html {
 }
 
 .next-article-button:hover {
-  background: #004d7a;
+  background: #333333;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 100, 156, 0.3);
+  box-shadow: 0 4px 12px rgba(28, 28, 28, 0.3);
 }
 
 /* Section anchors for quick links */
@@ -1367,7 +1446,7 @@ html {
 .article-section-headline {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #000;
   margin: 0 0 1rem 0;
   width: 70%;
   line-height: 1.2;

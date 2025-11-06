@@ -1,0 +1,58 @@
+{
+    "articles": [
+        {
+            "title": "How to cut your broadband and mobile bills",
+            "feature_color": "#1F4788",
+            "sections": [
+                {
+                    "section_type": "main_article",
+                    "headline": "How to cut your broadband and mobile bills",
+                    "subheadline": "Switching or haggling could save you hundreds of pounds a year. Adam Snook explains how to get real value from the telecoms market",
+                    "author": "Adam Snook",
+                    "content": "Being proactive is essential to saving money on your broadband, TV and mobile bills. And that means haggling with a provider, or being prepared to switch at the end of a contract, becoming part of your regular routine. Every year, new providers emerge to challenge the established, often underperforming, larger brands. The number of customers using these smaller providers is also growing. For the first time, we've been able to calculate haggling and switching savings for providers beyond the biggest four, and the data shows that yet again, the smaller brands represent better value.\n\nSwitching is likely to be the best option in terms of average saving across all contract types – particularly with broadband and broadband and TV packages. But if you're happy with your provider, haggling is still a good way to ensure you're not overpaying.\n\nIf you aren't making the most of opportunities to switch, such as when a contract ends, it's likely you're missing out on savings. The graphic, below right, shows average savings made by customers whether switching from a contract including a phone, or switching from one Sim-only deal to another. However, the biggest saving you're likely to make is switching a mobile phone contract to a Sim-only deal and keeping the handset.\n\nMobile customers who switched network and swapped a phone contract for a Sim-only deal saved, on average, £258 a year. People who stayed with their network but haggled their way to Sim-only saved, on average, £210 annually. Big savings are also available when switching from one of the Big Four providers in any sector. For example, an average of £237 a year was banked by broadband TV customers switching from Sky.\n\nFor all three sectors, the most common reasons for switching providers were price-related, such as seeing a better deal with a different provider, or facing a price increase. Before switching, check if your prospective provider uses annual price increases, as these can make monthly bills spiral over time.\n\nMobile customers tended to switch for a better mobile deal with another provider (41%) or had issues with signal and reception (13%). Broadband customers switched to avoid slow broadband (21%) or an unreliable connection (16%). Broadband and TV customers, meanwhile, sought new providers due to poor customer service (17%).\n\nWe asked what changes customers noticed after switching, and the benefits went beyond savings. Both broadband and mobile customers gained faster internet, better connections and improved customer service. There were more positive experiences such as these reported after switching than negative ones.\n\nIf you don't want to leave your provider, try haggling. Although some customers may find it intimidating, responses to our survey showed it was a successful way to save money and get more from your provider. Do keep in mind that if you're out of contract with a major provider that puts prices up every year, haggling commits you to a new fixed-term deal and another cycle of yearly raises. Find out more and see our haggling tips on p19.\n\nUltimately, it's in your hands to make sure you're getting real value from a contract. And whether you haggle or switch, it's likely you can grab an upgrade as well as save money."
+                },
+                {
+                    "section_type": "data_table",
+                    "title": "AVERAGE ANNUAL SAVINGS",
+                    "note": "Average annual savings by customers who either switched to a new provider or haggled with their existing provider. Based on an online survey in July and August 2025 of 5,014 people who had a broadband, broadband and TV and/or mobile network contract end in the preceding 12 months. Representative of UK adults who have a contract with a provider, and are solely or jointly responsible for paying bills. On p18 and p19, minimum sample size for brand switching and haggling average figures is 30.",
+                    "columns": [
+                        "Category",
+                        "Haggling",
+                        "Switching"
+                    ],
+                    "table_data": [
+                        {
+                            "Category": "BROADBAND",
+                            "Haggling": "£100",
+                            "Switching": "£169"
+                        },
+                        {
+                            "Category": "BROADBAND AND TV",
+                            "Haggling": "£99",
+                            "Switching": "£79"
+                        },
+                        {
+                            "Category": "MOBILE CONTRACT TO CONTRACT (INCLUDING A PHONE)",
+                            "Haggling": "£41",
+                            "Switching": "£66"
+                        },
+                        {
+                            "Category": "MOBILE SIM-ONLY TO SIM-ONLY",
+                            "Haggling": "£64",
+                            "Switching": "£65"
+                        }
+                    ]
+                },
+                {
+                    "section_type": "feature_callout",
+                    "title": "MOBILE CUSTOMERS WHO SWITCHED NETWORK AND SWAPPED A PHONE CONTRACT FOR A SIM-ONLY DEAL SAVED, ON AVERAGE, £258 A YEAR"
+                },
+                {
+                    "section_type": "sidebar",
+                    "title": "BETTER RECEPTION",
+                    "content": "Unreliable data connections are often frustrating for mobile users. To help you find the best network, our new mobile quality checker map (which.co.uk/mobilemap) shows the average network performance in each postcode area in the UK.\n\nBased on 'how often will it work?', it uses a percentage to represent how useful and consistent the signal is. In contrast, a coverage map would tell you whether or not a network provides coverage in the area, but not how good it is. As all networks claim around 99% UK coverage, this isn't as useful.\n\nEnter your postcode or click on an area to see how good networks are, or try advanced mode to compare up to five areas. Smaller networks use the infrastructure of the bigger networks (EE, O2, Three, Vodafone), and you can expect their quality to be the same as the parent network.\n\nIf you're struggling with your data connection or call reception, you can also try these tips:\n\n1. Reset the signal by turning your phone off and on, or switching in and out of airplane mode. This makes your phone search for a connection, and it may come back better.\n\n2. If your data connection is good but call quality is poor, try switching on wi-fi calling.\n\n3. Instead of holding your phone on a call, leave it in a spot that has a good signal, and use Bluetooth headphones.\n\n4. If others in your home are with a different provider, see if their reception is better. If so, it's more likely to be a problem with your network.\n\n5. If all else fails, check the provider website to see if there are network problems in your area."
+                }
+            ]
+        }
+    ]
+}

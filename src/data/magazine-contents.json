@@ -12,37 +12,30 @@
       },
       {
         "id": 2,
-        "image": "/contentimages/Screenshot 2025-11-05 at 11.06.39.png",
-        "title": "BEST TECH & HOME STORES 2025",
+        "image": "/contentimages/best.png",
+        "title": "Best tech & home stores 2025",
         "intro": "Thousands of shoppers tell us which stores offer seamless experiences – and which left them less than impressed",
         "isFeatured": false
       },
       {
         "id": 3,
-        "image": "/contentimages/Screenshot 2025-11-05 at 11.06.59.png",
-        "title": "Electric Vehicle Charging Solutions",
-        "intro": "Everything you need to know about home charging stations and public infrastructure.",
+        "image": "/contentimages/energy.png",
+        "title": "Rising energy costs this winter",
+        "intro": "Which? energy editor Emily Seymour reports on why now could be a good time to switch supplier and what a tariff with lower daily standing charges might mean for customers.",
         "isFeatured": false
       },
       {
         "id": 4,
-        "image": "/contentimages/Screenshot 2025-11-05 at 11.07.52.png",
-        "title": "Kitchen Appliances That Last",
-        "intro": "Durability testing reveals which brands offer the best value for money.",
+        "image": "/contentimages/bills.png",
+        "title": "How to cut your broadband and mobile bills",
+        "intro": "Switching or haggling could save you hundreds of pounds a year. Adam Snook explains how to get real value from the telecoms market",
         "isFeatured": false
       },
       {
         "id": 5,
-        "image": "/contentimages/Screenshot 2025-11-05 at 13.03.44.png",
-        "title": "Streaming Services Compared",
-        "intro": "Which platforms offer the best content and value in 2025?",
-        "isFeatured": false
-      },
-      {
-        "id": 6,
-        "image": "/contentimages/Screenshot 2025-11-05 at 13.03.53.png",
-        "title": "Home Security Systems Review",
-        "intro": "Professional monitoring vs DIY: what's right for your home?",
+        "image": "/contentimages/insurance.png",
+        "title": "Home insurance worth buying",
+        "intro": "Dean Sobers reveals home insurance Best Buys and providers we recommend – and the cover you really need",
         "isFeatured": false
       }
     ]

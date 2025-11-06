@@ -1,0 +1,47 @@
+{
+    "articles": [
+        {
+            "title": "Home insurance worth buying",
+            "feature_color": "#2E5090",
+            "sections": [
+                {
+                    "section_type": "main_article",
+                    "headline": "Home insurance worth buying",
+                    "subheadline": "Dean Sobers reveals home insurance Best Buys and providers we recommend – and the cover you really need",
+                    "author": "Dean Sobers",
+                    "content": "Is your home insurance only good on paper? When most home insurance customers contact their provider to claim, it (eventually) pays up. But for many it's not that simple. In our latest survey of thousands of policyholders, a third reported that their most recent claim had been only partially accepted, outright rejected or was in dispute.\n\nAccording to industry statistics, home insurers have long been trailing other common kinds of insurance – such as car or pet cover – in terms of the proportions of claims accepted, and the level of complaints has risen.\n\nBut it's a risky move not to insure your home while we wait for insurers to clean up their act. The good news is that not all firms are alike. After extensively analysing customer feedback, and assessing the cover of 78 policies, we can recommend two providers appearing to buck the industry trend and 17 Best Buy policies. Read on to see how people really use their home insurance, which firms we've rated and why, and how to get affordable cover."
+                },
+                {
+                    "section_type": "main_article",
+                    "headline": "The most frequently used insurance features",
+                    "content": "The most common claim reported in our survey was accidental damage, making up a fifth of claims. Ironically, this cover is usually an add-on, not included in full in around seven in 10 policies, so a lot of us just don't bother with it. According to figures shared with Which? by comparison website Confused.com, about half of its customers buying combined home insurance in the 12 months to July selected a policy without accidental damage included.\n\nAs the name suggests, the cover generally applies if you damage things, such as spilling tea on your laptop or severing a pipe when doing DIY. But it's usually defined as covering 'sudden damage', so it encompasses more than just clumsy mishaps. For example, damage to electrical appliances caused by power surges can fall under this category. Among those in our survey who had claimed specifically for accidental damage, the average payout was £700.\n\nThe second most common claim – from a sixth of claimants – was for damage from high winds, heavy rain or hail. The average payout for these claims was £1,500. Sadly, however, storm claims were also the most commonly rejected by insurers (18% of the time).\n\nThe third most common claim reported was for home emergency, which includes incidents requiring an immediate response, such as a central heating breakdown. Some 16% of respondents had made this claim, and the average payout was £1,000. Like accidental damage, home emergency cover is often an optional extra with home insurance."
+                },
+                {
+                    "section_type": "main_article",
+                    "headline": "Our Recommended Providers",
+                    "content": "We surveyed 2,804 home insurance customers between 18 June and 1 July 2025 about their recent experiences (carried out online with the Connect panel, and members of the public by Deltapoll). We also examined the details of insurers' policies. Which? Recommended Providers need to have excellent general feedback from customers who had claimed with them. They also had a customer score, based on satisfaction and likelihood of recommending a provider to a friend, of at least 72%.\n\nThey needed to hold their own when it came specifically to their claims handling."
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "TESCO INSURANCE",
+                    "content": "BUILDINGS 71% CONTENTS 70% CUSTOMER 75% CLAIMS 76%\n\nTesco was one of just three providers to be rated highly for affordability, getting four out of five stars in that category. But customers also rated its service as first-class. It earned the fourth highest overall customer score, and was second of 24 providers – hot on NFU Mutual's heels – for its claims handling. 'Value for money and dealing with claims are excellent,' one customer summarised.\n\nImportantly, its policy wasn't a standout in regards to the comprehensiveness of its cover. Here, claimants gave it three out of five stars, and we largely concurred. It did reasonably well in our policy analysis – not lacking any features we would consider crucial – but it was slightly below our Best Buy threshold (Best Buys were in the top 40% of policies rated). This means that if you need particularly high levels of cover, it might not be the best fit for you. However, our customer scores showed that it's clearly delivering the goods for Tesco claimants, which helped to elevate it in our overall analysis."
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "NFU MUTUAL",
+                    "content": "BUILDINGS 78% CONTENTS 78% CUSTOMER 81% CLAIMS 77%\n\nNFU Mutual sells two home insurance policies: its standard 'Home insurance' product and a separate 'Bespoke' policy. Its 'Home insurance' product has different levels of cover available depending on the value of your property and contents. We rated the lowest tier of this cover, available to customers insuring a property up to £500,000 and up to £60,000 of contents. It was among the 10 top-scoring policies we reviewed, both for buildings and contents cover. The more premium 'Bespoke' was second-highest scoring for its buildings cover and first for its contents cover (with scores of 82% and 90% respectively).\n\nIt also topped our tables of customer and claims scores, with policyholders particularly impressed with the comprehensiveness of its cover and its service during claims. If it has a weakness, it's cost. It earned two out of five stars for affordability, with many customers caveating praise of its service by warning that it's expensive. That said, it got high marks for value for money, so most seemed to see it as being worth the spend."
+                },
+                {
+                    "section_type": "image",
+                    "title": "HOME INSURANCE PRICES",
+                    "content": "The average price of a combined home insurance policy, as tracked by the Association of British Insurers. [page30_img1.png - Line graph showing premium prices from Q2 2023 to Q2 2025, ranging from approximately £300 to £450]"
+                },
+                {
+                    "section_type": "feature_callout",
+                    "title": "Recommended Providers",
+                    "content": "This year's top home insurers are very different: one is a rural-property specialist and sells exclusively over the phone; the other gives discounts to Clubcard holders. Policy scores are for the insurer's standard policy"
+                }
+            ]
+        }
+    ]
+}

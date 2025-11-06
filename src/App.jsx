@@ -8,6 +8,9 @@ import magazineIssuesData from './data/magazine-issues.json';
 import magazineContentsData from './data/magazine-contents.json';
 import foodPricesArticleData from './data/article-how-to-beat-rising-food-prices.json';
 import techArticleData from './data/tech.json';
+import page9ArticleData from './data/page-9.json';
+import page16ArticleData from './data/page-16.json';
+import page30ArticleData from './data/page-30.json';
 
 // Import icons from lucide-react
 // Don't forget to run: npm install lucide-react
@@ -30,6 +33,7 @@ function App() {
   const [showMagazineDetails, setShowMagazineDetails] = useState(false);
   const [selectedIssueId, setSelectedIssueId] = useState(null);
   const [selectedArticleId, setSelectedArticleId] = useState(null);
+  const [selectedYear, setSelectedYear] = useState(2025); // Default to current year
 
   // Filter articles (retained for other tabs)
   const filteredArticles = (articlesData || []).filter(article =>
@@ -98,7 +102,10 @@ function App() {
                       className="magazine-cta-button"
                       onClick={() => {
                         setActiveTab('magazine');
-                        setSelectedIssueId(1); // November 2025 issue
+                        setShowMagazineDetails(false);
+                        setSelectedIssueId(null);
+                        setSelectedArticleId(null);
+                        window.scrollTo(0, 0);
                       }}
                     >
                       Read magazine
@@ -198,7 +205,13 @@ function App() {
           if (selectedArticleId === 1) {
             article = foodPricesArticleData.articles[0]; // "How to beat rising food prices"
           } else if (selectedArticleId === 2) {
-            article = techArticleData.articles[0]; // "TECH & HOME STORES"
+            article = techArticleData.articles[0]; // "Best tech & home stores 2025"
+          } else if (selectedArticleId === 3) {
+            article = page9ArticleData.articles[0]; // "Rising energy costs this winter"
+          } else if (selectedArticleId === 4) {
+            article = page16ArticleData.articles[0]; // "How to cut your broadband and mobile bills"
+          } else if (selectedArticleId === 5) {
+            article = page30ArticleData.articles[0]; // "Home insurance worth buying"
           } else {
             // Default fallback
             article = foodPricesArticleData.articles[0];
@@ -209,7 +222,10 @@ function App() {
               <div className="article-header">
                 <button 
                   className="back-button"
-                  onClick={() => setSelectedArticleId(null)}
+                  onClick={() => {
+                    setSelectedArticleId(null);
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   ← Back
                 </button>
@@ -217,19 +233,31 @@ function App() {
               
               <article className="article-content">
                 {article.sections.map((section, index) => {
+                  // Function to get header background color based on article ID
+                  const getHeaderBackgroundColor = () => {
+                    switch (selectedArticleId) {
+                      case 1: return 'rgba(0, 100, 156, 0.4)'; // How to beat rising food prices - current blue
+                      case 2: return 'rgba(252, 193, 38, 0.4)'; // Best tech & home stores 2025 - #FCC126
+                      case 3: return 'rgba(233, 202, 233, 0.4)'; // Rising energy costs this winter - #E9CAE9
+                      case 4: return 'rgba(255, 212, 208, 0.4)'; // How to cut your broadband and mobile bills - #FFD4D0
+                      case 5: return 'rgba(214, 234, 211, 0.4)'; // Home insurance worth buying - #D6EAD3
+                      default: return 'rgba(0, 100, 156, 0.4)'; // Default to blue
+                    }
+                  };
+
                   switch (section.section_type) {
                     case 'main_article':
                       if (index === 0) {
                         // First main article with special layout
                         return (
                           <div key={index} className="article-section first-section">
-                            <div className="article-header-background">
+                            <div 
+                              className="article-header-background"
+                              style={{ backgroundColor: getHeaderBackgroundColor() }}
+                            >
                               <h1 className="article-headline">{section.headline}</h1>
                               {section.subheadline && (
                                 <p className="article-subheadline">{section.subheadline}</p>
-                              )}
-                              {section.author && (
-                                <p className="article-author">By {section.author}</p>
                               )}
                             </div>
                             {section.image && (
@@ -303,9 +331,12 @@ function App() {
                         // Other main articles
                         return (
                           <div key={index} className="article-section" id={`section-${index}`}>
-                            <h2 className="article-section-headline">
-                              {section.headline.charAt(0).toUpperCase() + section.headline.slice(1).toLowerCase()}
-                            </h2>
+                            <h2 
+                              className="article-section-headline"
+                              dangerouslySetInnerHTML={{
+                                __html: section.headline.charAt(0).toUpperCase() + section.headline.slice(1).toLowerCase().replace(/(\d+%)/g, '<span class="percentage-red">$1</span>')
+                              }}
+                            ></h2>
                             {section.subheadline && (
                               <p className="article-section-subheadline">{section.subheadline}</p>
                             )}
@@ -324,10 +355,13 @@ function App() {
                     
                     case 'callout_box':
                       return (
-                        <div key={index} className="callout-box">
-                          <h3 className="callout-title">
-                            {section.title.charAt(0).toUpperCase() + section.title.slice(1).toLowerCase()}
-                          </h3>
+                        <div key={index} className="callout-box" id={`section-${index}`}>
+                          <h3 
+                            className="callout-title"
+                            dangerouslySetInnerHTML={{
+                              __html: section.title.charAt(0).toUpperCase() + section.title.slice(1).toLowerCase().replace(/(\d+%)/g, '<span class="percentage-red">$1</span>')
+                            }}
+                          ></h3>
                           {section.content && (
                             <div className="callout-content">
                               {section.content.split('\n\n').map((paragraph, pIndex) => (
@@ -340,10 +374,13 @@ function App() {
                     
                     case 'feature_callout':
                       return (
-                        <div key={index} className="feature-callout">
-                          <h4 className="feature-title">
-                            {section.title.charAt(0).toUpperCase() + section.title.slice(1).toLowerCase()}
-                          </h4>
+                        <div key={index} className="feature-callout" id={`section-${index}`}>
+                          <h4 
+                            className="feature-title"
+                            dangerouslySetInnerHTML={{
+                              __html: section.title.charAt(0).toUpperCase() + section.title.slice(1).toLowerCase().replace(/(\d+%)/g, '<span class="percentage-red">$1</span>')
+                            }}
+                          ></h4>
                           {section.content && (
                             <p className="feature-content">{section.content}</p>
                           )}
@@ -352,10 +389,13 @@ function App() {
                     
                     case 'data_table':
                       return (
-                        <div key={index} className="data-table-section">
-                          <h3 className="table-title">
-                            {section.title.charAt(0).toUpperCase() + section.title.slice(1).toLowerCase()}
-                          </h3>
+                        <div key={index} className="data-table-section" id={`section-${index}`}>
+                          <h3 
+                            className="table-title"
+                            dangerouslySetInnerHTML={{
+                              __html: section.title.charAt(0).toUpperCase() + section.title.slice(1).toLowerCase().replace(/(\d+%)/g, '<span class="percentage-red">$1</span>')
+                            }}
+                          ></h3>
                           {section.subheadline && (
                             <p className="table-subheadline">{section.subheadline}</p>
                           )}
@@ -371,8 +411,14 @@ function App() {
                               <tbody>
                                 {section.table_data.map((row, rIndex) => (
                                   <tr key={rIndex}>
-                                    <td className="retailer-name">{row.Retailer}</td>
-                                    <td className="price">{row['Average price']}</td>
+                                    {section.columns.map((column, cIndex) => (
+                                      <td 
+                                        key={cIndex} 
+                                        className={cIndex === 0 ? 'retailer-name' : 'price'}
+                                      >
+                                        {row[column]}
+                                      </td>
+                                    ))}
                                   </tr>
                                 ))}
                               </tbody>
@@ -380,6 +426,25 @@ function App() {
                           </div>
                           {section.note && (
                             <p className="table-note">{section.note}</p>
+                          )}
+                        </div>
+                      );
+                    
+                    case 'sidebar':
+                      return (
+                        <div key={index} className="article-sidebar" id={`section-${index}`}>
+                          <h4 
+                            className="sidebar-title"
+                            dangerouslySetInnerHTML={{
+                              __html: section.title.charAt(0).toUpperCase() + section.title.slice(1).toLowerCase().replace(/(\d+%)/g, '<span class="percentage-red">$1</span>')
+                            }}
+                          ></h4>
+                          {section.content && (
+                            <div className="sidebar-content">
+                              {section.content.split('\n\n').map((paragraph, pIndex) => (
+                                <p key={pIndex}>{paragraph}</p>
+                              ))}
+                            </div>
                           )}
                         </div>
                       );
@@ -396,8 +461,22 @@ function App() {
                   <button 
                     className="next-article-button"
                     onClick={() => {
-                      // For now, just go back to contents
-                      setSelectedArticleId(null);
+                      // Find current article in the contents
+                      const currentContents = magazineContentsData.find(c => c.issueId === selectedIssueId);
+                      if (currentContents) {
+                        const currentIndex = currentContents.articles.findIndex(a => a.id === selectedArticleId);
+                        const nextIndex = currentIndex + 1;
+                        
+                        if (nextIndex < currentContents.articles.length) {
+                          // Go to next article
+                          setSelectedArticleId(currentContents.articles[nextIndex].id);
+                          window.scrollTo(0, 0);
+                        } else {
+                          // No more articles, go back to contents
+                          setSelectedArticleId(null);
+                          window.scrollTo(0, 0);
+                        }
+                      }
                     }}
                   >
                     Next article →
@@ -417,7 +496,10 @@ function App() {
               <div className="magazine-contents-header">
                 <button 
                   className="back-button"
-                  onClick={() => setSelectedIssueId(null)}
+                  onClick={() => {
+                    setSelectedIssueId(null);
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   ← Back
                 </button>
@@ -435,13 +517,14 @@ function App() {
               {issueContent.articles.filter(article => article.isFeatured).map(article => (
                 <div 
                   key={article.id} 
-                  className={`featured-article ${(article.id === 1 || article.id === 2) ? 'clickable' : ''}`}
+                  className={`featured-article ${(article.id >= 1 && article.id <= 5) ? 'clickable' : ''}`}
                   onClick={() => {
-                    if (article.id === 1 || article.id === 2) {
+                    if (article.id >= 1 && article.id <= 5) {
                       setSelectedArticleId(article.id);
+                      window.scrollTo(0, 0);
                     }
                   }}
-                  style={{ cursor: (article.id === 1 || article.id === 2) ? 'pointer' : 'default' }}
+                  style={{ cursor: (article.id >= 1 && article.id <= 5) ? 'pointer' : 'default' }}
                 >
                   <img 
                     src={article.image} 
@@ -461,13 +544,14 @@ function App() {
                 {issueContent.articles.filter(article => !article.isFeatured).map(article => (
                   <div 
                     key={article.id} 
-                    className={`article-content-card ${(article.id === 1 || article.id === 2) ? 'clickable' : ''}`}
+                    className={`article-content-card ${(article.id >= 1 && article.id <= 5) ? 'clickable' : ''}`}
                     onClick={() => {
-                      if (article.id === 1 || article.id === 2) {
+                      if (article.id >= 1 && article.id <= 5) {
                         setSelectedArticleId(article.id);
+                        window.scrollTo(0, 0);
                       }
                     }}
-                    style={{ cursor: (article.id === 1 || article.id === 2) ? 'pointer' : 'default' }}
+                    style={{ cursor: (article.id >= 1 && article.id <= 5) ? 'pointer' : 'default' }}
                   >
                     <img 
                       src={article.image} 
@@ -492,7 +576,10 @@ function App() {
               <div className="magazine-details-header">
                 <button 
                   className="back-button"
-                  onClick={() => setShowMagazineDetails(false)}
+                  onClick={() => {
+                    setShowMagazineDetails(false);
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   ← Back
                 </button>
@@ -503,7 +590,11 @@ function App() {
               <div className="year-pills-container">
                 <div className="year-pills-scroll">
                   {generateYearPills().map(year => (
-                    <button key={year} className="year-pill">
+                    <button 
+                      key={year} 
+                      className={`year-pill ${selectedYear === year ? 'active' : ''}`}
+                      onClick={() => setSelectedYear(year)}
+                    >
                       {year}
                     </button>
                   ))}
@@ -512,21 +603,38 @@ function App() {
 
               {/* Magazine Issues Grid - Now clickable */}
               <div className="magazine-issues-grid">
-                {magazineIssuesData.map(issue => (
-                  <div 
-                    key={issue.id} 
-                    className="magazine-issue-card clickable"
-                    onClick={() => setSelectedIssueId(issue.id)}
-                  >
+                {magazineIssuesData
+                  .filter(issue => issue.year === selectedYear)
+                  .sort((a, b) => {
+                    // Parse dates to get proper chronological order (most recent first)
+                    const dateA = new Date(a.date);
+                    const dateB = new Date(b.date);
+                    return dateB - dateA; // Descending order (newest first)
+                  })
+                  .map((issue, index) => {
+                    const isClickable = issue.id === 1; // Only November 2025 (ID 1) is clickable
+                    return (
+                      <div 
+                        key={issue.id} 
+                        className={`magazine-issue-card ${isClickable ? 'clickable' : ''}`}
+                        onClick={() => {
+                          if (isClickable) {
+                            setSelectedIssueId(issue.id);
+                            window.scrollTo(0, 0);
+                          }
+                        }}
+                        style={{ cursor: isClickable ? 'pointer' : 'default' }}
+                      >
                     <img 
                       src={issue.image} 
                       alt={issue.date}
                       className="magazine-issue-image"
                       onError={(e) => e.target.src = 'https://placehold.co/150x200/f0f0f0/999?text=Issue'}
-                    />
-                    <div className="magazine-issue-date">{issue.date}</div>
-                  </div>
-                ))}
+                        />
+                        <div className="magazine-issue-date">{issue.date}</div>
+                      </div>
+                    );
+                  })}
               </div>
             </div>
           );
@@ -578,6 +686,7 @@ function App() {
                             onClick={(e) => {
                               e.stopPropagation();
                               setSelectedIssueId(1); // November 2025 issue (issueId: 1)
+                              window.scrollTo(0, 0);
                             }}
                           >
                             Read latest
@@ -670,6 +779,8 @@ function App() {
             setActiveTab('magazine');
             setShowMagazineDetails(false);
             setSelectedIssueId(null);
+            setSelectedArticleId(null);
+            window.scrollTo(0, 0);
           }}
         >
           <BookOpen className="nav-icon" strokeWidth={activeTab === 'magazine' ? 2.5 : 2} />

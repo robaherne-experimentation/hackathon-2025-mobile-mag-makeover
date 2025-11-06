@@ -1,0 +1,28 @@
+{
+    "articles": [
+        {
+            "title": "Rising energy costs this winter",
+            "feature_color": "#003366",
+            "sections": [
+                {
+                    "section_type": "main_article",
+                    "headline": "Rising energy costs this winter",
+                    "subheadline": "Which? energy editor Emily Seymour reports on why now could be a good time to switch supplier and what a tariff with lower daily standing charges might mean for customers",
+                    "author": "Emily Seymour",
+                    "content": "An increase of 2% in the energy price cap from 1 October has raised the average monthly bill to around £143 for a typical dual-fuel household paying variable or out-of-contract rates.\n\nBut we've consistently seen fixed deals for considerably less than the cap, meaning that the switching market is firmly back in business.\n\nSo if you're still paying variable rates, it's worth shopping around. We recommend avoiding fixes with high exit fees, in case you wish to leave early.\n\nWe're seeing more suppliers offering innovative time-of-use electricity tariffs, too. If you have a smart meter and can shift your use away from peak times, or have tech such as an electric car charger, heat pump or a battery, these could save you money. But check the specifics before you sign up; be aware of the peak-time slots, as often you'll pay more than a standard rate for electricity used in those windows.\n\nThe energy regulator, Ofgem, also announced last month that major providers will soon have to offer at least one tariff with lower daily standing charges. Rather than altering the price cap, these will be fixed tariffs that households have to sign up to. You'll start to see these from January. It will be up to energy firms to set specific rates, but Ofgem says the standing charges should be at least £150 a year less than those on a price-capped tariff, which currently equate to £320 a year.\n\nBut these costs won't disappear; instead they will shift onto unit rates, which providers may well hike up to cover the difference. That means these tariffs won't be right for most; households with very low energy use will benefit, but it will be crucial that providers make price comparisons clear for their customers, especially those in vulnerable positions."
+                }
+            ]
+        },
+        {
+            "title": "FIRST RECOMMENDED HEARING AID PROVIDERS",
+            "feature_color": "#003366",
+            "sections": [
+                {
+                    "section_type": "main_article",
+                    "headline": "FIRST RECOMMENDED HEARING AID PROVIDERS",
+                    "content": "Two companies have been named the first Which? Recommended Providers (WRPs) for hearing aids. Our survey of 3,609 hearing aid users rated Bayfields and M&S Opticians as offering exceptional service. Providers were rated on everything from product range and aftercare to value.\n\nBayfields, with an 86% customer score, topped the rankings, excelling in facilities, staff skill and hearing aid comfort. M&S Opticians, also a WRP for optician services, received five out of five stars for facilities and staff skill. Both firms stood out for value, and passed our additional checks on terms and conditions and standard offerings.\n\nIf you buy privately, beware of hidden costs. Some may be covered by your warranty, but it differs by provider, your hearing aid type and individual needs. Costs can include replacement receiver wires (from £80 a pair), assistive devices (eg TV streamers from £125 upfront), earwax removal (£120 annually), and repairs (average £100)."
+                }
+            ]
+        }
+    ]
+}
