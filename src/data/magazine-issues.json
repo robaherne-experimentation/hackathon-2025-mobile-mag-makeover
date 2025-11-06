@@ -2,16 +2,123 @@
   {
     "id": 1,
     "image": "/magimages/novemebr.jpg",
+    "year": 2025,
     "date": "November 2025"
   },
   {
     "id": 2,
-    "image": "/magimages/october.jpg", 
-    "date": "October 2025"
+    "image": "/magimages/which_cover_August2025.png", 
+    "year": 2025,
+    "date": "August 2025"
   },
   {
     "id": 3,
-    "image": "/magimages/september.jpg",
-    "date": "September 2025"
+    "image": "/magimages/which_cover_July2025.png",
+    "year": 2025,
+    "date": "July 2025"
+  },
+  {
+    "id": 4,
+    "image": "/magimages/which_cover_June2025.png",
+    "year": 2025,
+    "date": "June 2025"
+  },
+  {
+    "id": 5,
+    "image": "/magimages/which_cover_May2025.png",
+    "year": 2025,
+    "date": "May 2025"
+  },
+  {
+    "id": 6,
+    "image": "/magimages/which_cover_April2025.png",
+    "year": 2025,
+    "date": "April 2025"
+  },
+  {
+    "id": 7,
+    "image": "/magimages/which_cover_March2025.png",
+    "year": 2025,
+    "date": "March 2025"
+  },
+  {
+    "id": 8,
+    "image": "/magimages/which_cover_February2025.png",
+    "year": 2025,
+    "date": "February 2025"
+  },
+  {
+    "id": 9,
+    "image": "/magimages/which_cover_December2024.png",
+    "year": 2024,
+    "date": "December 2024"
+  },
+  {
+    "id": 10,
+    "image": "/magimages/which_cover_November2024.png",
+    "year": 2024,
+    "date": "November 2024"
+  },
+  {
+    "id": 11,
+    "image": "/magimages/which_cover_October2024.png",
+    "year": 2024,
+    "date": "October 2024"
+  },
+  {
+    "id": 12,
+    "image": "/magimages/which_cover_September2024.png",
+    "year": 2024,
+    "date": "September 2024"
+  },
+  {
+    "id": 13,
+    "image": "/magimages/which_cover_August2024.png", 
+    "year": 2024,
+    "date": "August 2024"
+  },
+  {
+    "id": 14,
+    "image": "/magimages/which_cover_July2024.png",
+    "year": 2024,
+    "date": "July 2024"
+  },
+  {
+    "id": 15,
+    "image": "/magimages/which_cover_June2024.png",
+    "year": 2024,
+    "date": "June 2024"
+  },
+  {
+    "id": 16,
+    "image": "/magimages/which_cover_May2024.png",
+    "year": 2024,
+    "date": "May 2024"
+  },
+  {
+    "id": 17,
+    "image": "/magimages/which_cover_April2024.png",
+    "year": 2024,
+    "date": "April 2024"
+  },
+  {
+    "id": 18,
+    "image": "/magimages/which_cover_March2024.png",
+    "year": 2024,
+    "date": "March 2024"
+  },
+  {
+    "id": 18,
+    "image": "/magimages/which_cover_February2024.png",
+    "year": 2024,
+    "date": "February 2024"
+  },
+  {
+    "id": 19,
+    "image": "/magimages/which_cover_January2024.png",
+    "year": 2024,
+    "date": "January 2024"
   }
+
+
 ]
