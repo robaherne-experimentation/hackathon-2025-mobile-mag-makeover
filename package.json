@@ -7,7 +7,19 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "terraform:init": "cd terraform && AWS_PROFILE=hackathon terraform init",
+    "terraform:validate": "cd terraform && AWS_PROFILE=hackathon terraform validate",
+    "terraform:fmt": "cd terraform && terraform fmt -recursive",
+    "terraform:plan": "cd terraform && AWS_PROFILE=hackathon terraform plan -out=tfplan",
+    "terraform:apply": "cd terraform && AWS_PROFILE=hackathon terraform apply tfplan",
+    "terraform:show": "cd terraform && AWS_PROFILE=hackathon terraform show",
+    "terraform:destroy": "cd terraform && AWS_PROFILE=hackathon terraform destroy",
+    "deploy:infrastructure": "npm run terraform:plan && npm run terraform:apply",
+    "deploy:sync": "bash deploy.sh sync",
+    "deploy:full": "npm run build && npm run deploy:infrastructure && npm run deploy:sync",
+    "deploy:status": "bash deploy.sh status",
+    "deploy:invalidate": "bash deploy.sh sync"
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^6.13.1",

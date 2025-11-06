@@ -1,0 +1,16 @@
+# AWS Configuration
+aws_profile = "hackathon"
+aws_region  = "eu-west-1"
+
+# Environment
+environment = "dev"
+
+# S3 Configuration
+s3_bucket_name = "hackathon-2025-mmm-website"
+
+# CloudFront Configuration
+cloudfront_domain_name = "mmm.hackathon-2025.product.which.co.uk"
+
+# ACM Certificate Configuration
+# The certificate will be automatically created and validated via DNS
+certificate_validation_method = "DNS"
