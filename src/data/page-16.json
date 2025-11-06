@@ -5,7 +5,8 @@
             "feature_color": "#1F4788",
             "sections": [
                 {
-                    "section_type": "main_article",
+                    "section_type": "main_article",                
+                    "image": "/contentimages/bills.png",
                     "headline": "How to cut your broadband and mobile bills",
                     "subheadline": "Switching or haggling could save you hundreds of pounds a year. Adam Snook explains how to get real value from the telecoms market",
                     "author": "Adam Snook",

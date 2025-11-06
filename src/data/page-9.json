@@ -5,7 +5,8 @@
             "feature_color": "#003366",
             "sections": [
                 {
-                    "section_type": "main_article",
+                    "section_type": "main_article",                 
+                    "image": "/contentimages/energy.png",
                     "headline": "Rising energy costs this winter",
                     "subheadline": "Which? energy editor Emily Seymour reports on why now could be a good time to switch supplier and what a tariff with lower daily standing charges might mean for customers",
                     "author": "Emily Seymour",

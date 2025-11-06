@@ -5,7 +5,8 @@
             "feature_color": "#2E5090",
             "sections": [
                 {
-                    "section_type": "main_article",
+                    "section_type": "main_article",                
+                    "image": "/contentimages/insurance.png",
                     "headline": "Home insurance worth buying",
                     "subheadline": "Dean Sobers reveals home insurance Best Buys and providers we recommend – and the cover you really need",
                     "author": "Dean Sobers",
