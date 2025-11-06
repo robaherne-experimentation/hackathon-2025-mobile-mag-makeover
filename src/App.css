@@ -137,7 +137,7 @@ body {
   max-width: 480px; 
   margin: 0 auto;
   background-color: #ffffff; /* Main app background is white */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow-x: hidden;
 }
@@ -1404,27 +1404,61 @@ html {
 .article-footer {
   margin-top: 3rem;
   padding: 2rem 0;
-  border-top: 4px solid #00649c;
-  text-align: center;
 }
 
-.next-article-button {
+/* Next Article Preview Box */
+.next-article-preview {
+  border: 2px solid #1c1c1c;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 0 1rem;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(28, 28, 28, 0.1);
+  transition: all 0.2s ease;
+}
+
+.next-article-preview:hover {
+  box-shadow: 0 6px 20px rgba(28, 28, 28, 0.15);
+}
+
+.next-article-title {
+  font-family: 'Tiempos', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.next-article-intro {
+  font-family: 'National2', sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0 0 1.25rem 0;
+}
+
+.read-next-button {
   background: #1c1c1c;
   color: white;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1.125rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 25px;
   cursor: pointer;
   transition: all 0.2s ease;
   font-family: 'National2', sans-serif;
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.next-article-button:hover {
+.read-next-button:hover {
   background: #333333;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(28, 28, 28, 0.3);
+  box-shadow: 0 4px 8px rgba(28, 28, 28, 0.2);
 }
 
 /* Section anchors for quick links */

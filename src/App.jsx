@@ -455,33 +455,38 @@ function App() {
                 })}
               </article>
               
-              {/* Article Footer */}
+              {/* Article Footer - Next Article Preview */}
               <footer className="article-footer">
-                <div className="next-article-link">
-                  <button 
-                    className="next-article-button"
-                    onClick={() => {
-                      // Find current article in the contents
-                      const currentContents = magazineContentsData.find(c => c.issueId === selectedIssueId);
-                      if (currentContents) {
-                        const currentIndex = currentContents.articles.findIndex(a => a.id === selectedArticleId);
-                        const nextIndex = currentIndex + 1;
-                        
-                        if (nextIndex < currentContents.articles.length) {
-                          // Go to next article
-                          setSelectedArticleId(currentContents.articles[nextIndex].id);
-                          window.scrollTo(0, 0);
-                        } else {
-                          // No more articles, go back to contents
-                          setSelectedArticleId(null);
-                          window.scrollTo(0, 0);
-                        }
-                      }
-                    }}
-                  >
-                    Next article →
-                  </button>
-                </div>
+                {(() => {
+                  // Find current article in the contents
+                  const currentContents = magazineContentsData.find(c => c.issueId === selectedIssueId);
+                  if (currentContents) {
+                    const currentIndex = currentContents.articles.findIndex(a => a.id === selectedArticleId);
+                    const nextIndex = currentIndex + 1;
+                    
+                    // Only show if there's a next article
+                    if (nextIndex < currentContents.articles.length) {
+                      const nextArticle = currentContents.articles[nextIndex];
+                      
+                      return (
+                        <div className="next-article-preview">
+                          <h3 className="next-article-title">{nextArticle.title}</h3>
+                          <p className="next-article-intro">{nextArticle.intro}</p>
+                          <button 
+                            className="read-next-button"
+                            onClick={() => {
+                              setSelectedArticleId(nextArticle.id);
+                              window.scrollTo(0, 0);
+                            }}
+                          >
+                            Read Next →
+                          </button>
+                        </div>
+                      );
+                    }
+                  }
+                  return null; // No next article, don't show anything
+                })()}
               </footer>
             </div>
           );
