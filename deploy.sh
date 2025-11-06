@@ -110,33 +110,40 @@ sync_to_s3() {
   
   log_info "Using S3 bucket: $S3_BUCKET"
   
-  # Sync the dist folder to S3
+  # Sync the dist folder to S3 (exclude all HTML to handle them separately)
   aws s3 sync dist/ "s3://${S3_BUCKET}/" \
     --delete \
     --cache-control "max-age=31536000,public" \
-    --exclude "index.html" \
     --exclude "*.html" \
     --exclude "*.map"
-  
-  # Upload HTML files with no-cache
-  aws s3 sync dist/ "s3://${S3_BUCKET}/" \
-    --cache-control "max-age=0,no-cache,no-store,must-revalidate" \
-    --include "*.html" \
-    --exclude "*" \
-    --content-type "text/html; charset=utf-8"
-  
+
+  # Upload all HTML files (except index.html) with no-cache
+  find dist -type f -name '*.html' ! -name 'index.html' | while read -r htmlfile; do
+    relpath="${htmlfile#dist/}"
+    aws s3 cp "$htmlfile" "s3://${S3_BUCKET}/$relpath" \
+      --cache-control "max-age=0,no-cache,no-store,must-revalidate" \
+      --content-type "text/html; charset=utf-8"
+  done
+
+  # Always upload index.html with no-cache and correct content-type
+  if [ -f dist/index.html ]; then
+    aws s3 cp dist/index.html "s3://${S3_BUCKET}/index.html" \
+      --cache-control "max-age=0,no-cache,no-store,must-revalidate" \
+      --content-type "text/html; charset=utf-8"
+  fi
+
   # Upload source maps with no-cache
   aws s3 sync dist/ "s3://${S3_BUCKET}/" \
     --cache-control "max-age=0,no-cache,no-store,must-revalidate" \
     --include "*.map" \
     --exclude "*"
-  
+
   # Invalidate CloudFront cache
   log_info "Invalidating CloudFront distribution: $CLOUDFRONT_ID"
   aws cloudfront create-invalidation \
     --distribution-id "$CLOUDFRONT_ID" \
     --paths "/*"
-  
+
   log_info "Sync completed successfully"
 }
 
