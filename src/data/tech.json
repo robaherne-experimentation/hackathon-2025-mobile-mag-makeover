@@ -1,0 +1,727 @@
+{
+    "articles": [
+        {
+            "title": "Best tech and home stores 2025",
+            "sections": [
+                {
+                    "section_type": "main_article",
+                    "headline": "BEST TECH & HOME STORES 2025",
+                    "subheadline": "Thousands of shoppers tell us which stores offer seamless experiences – and which left them less than impressed",
+                    "content": "Whether you're treating yourself to the latest laptop or replacing a temperamental tumble dryer, how do you know which shop to choose? Everyone wants a good price, but not at the expense of a shonky product, rude staff, dodgy deliveries or a guarantee barely worth the paper it's printed on.\n\nWe've quizzed thousands of shoppers about their experiences of buying tech and home appliances to bring you the definitive guide on where to buy.\n\nRicher Sounds is top for tech, while Samsung leads the pack for the first time for appliances. Shoppers love everything about these two retailers, from their excellent value for money to their fantastic after-sales service.\n\nMeanwhile, at the bottom of the pile are Sainsbury's for tech purchases, and The Range and Wickes for appliances.\n\nHere, we unpick the real story behind thousands of purchases to reveal the retailers you love the most. We also unveil a string of new Which? Recommended Providers (WRPs). Only the best of the best qualify – retailers need to meet strict criteria, including at least four stars for after-sales and customer service, plus a clear and legally compliant returns policy."
+                },
+                {
+                    "section_type": "data_table",
+                    "title": "THE BEST HOME APPLIANCE STORES",
+                    "note": "Results based on an online survey of 4,101 members of the Which? Connect panel general public, who told us about 6,568 experiences with home appliance retailers. The survey was conducted in July and August 2025. Sample sizes in brackets. A dash (-) means not enough responses to include a star rating. Customer score is based on satisfaction with the brand and likelihood to recommend.",
+                    "columns": [
+                        "Retailer",
+                        "Customer Score",
+                        "Value for money",
+                        "After-sales service and returns",
+                        "Delivery",
+                        "How easy it is to use the website/app",
+                        "Customer service during the buying process",
+                        "Product quality",
+                        "Product range/availability",
+                        "WRP"
+                    ],
+                    "table_data": [
+                        {
+                            "Retailer": "Samsung (83)",
+                            "Customer Score": "91%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★★",
+                            "Product quality": "★★★★★",
+                            "Product range/availability": "★★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "John Lewis (681)",
+                            "Customer Score": "89%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★★",
+                            "Product quality": "★★★★★",
+                            "Product range/availability": "★★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "Euronics (148)",
+                            "Customer Score": "86%",
+                            "Value for money": "★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "★★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "Lakeland (68)",
+                            "Customer Score": "86%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "Shark (79)",
+                            "Customer Score": "86%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★★",
+                            "Product quality": "-",
+                            "Product range/availability": "★★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Miele (36)",
+                            "Customer Score": "85%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "-",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Ninja (127)",
+                            "Customer Score": "85%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "AO (553)",
+                            "Customer Score": "84%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "Next (47)",
+                            "Customer Score": "84%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "Costco (94)",
+                            "Customer Score": "82%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Hughes (39)",
+                            "Customer Score": "82%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "-",
+                            "Product range/availability": "★★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Homebase (34)",
+                            "Customer Score": "81%",
+                            "Value for money": "★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Vax (66)",
+                            "Customer Score": "81%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★★",
+                            "Product quality": "-",
+                            "Product range/availability": "★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "Appliances Direct (127)",
+                            "Customer Score": "80%",
+                            "Value for money": "★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Ikea (128)",
+                            "Customer Score": "80%",
+                            "Value for money": "★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "Amazon (1,270)",
+                            "Customer Score": "79%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Argos (822)",
+                            "Customer Score": "79%",
+                            "Value for money": "★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Boots Kitchen Appliances (33)",
+                            "Customer Score": "79%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "-",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "-",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Dyson (82)",
+                            "Customer Score": "79%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "QVC UK (32)",
+                            "Customer Score": "79%",
+                            "Value for money": "-",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "-",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "-",
+                            "Product range/availability": "★★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Dunelm (90)",
+                            "Customer Score": "78%",
+                            "Value for money": "★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Very (67)",
+                            "Customer Score": "78%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Tesco (161)",
+                            "Customer Score": "77%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Marks Electrical (64)",
+                            "Customer Score": "76%",
+                            "Value for money": "★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "-",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Asda / George (228)",
+                            "Customer Score": "75%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Home Bargains (76)",
+                            "Customer Score": "75%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Sainsbury's (106)",
+                            "Customer Score": "74%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Currys (863)",
+                            "Customer Score": "74%",
+                            "Value for money": "★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "B&M (102)",
+                            "Customer Score": "73%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "B&Q (97)",
+                            "Customer Score": "73%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Robert Dyas (62)",
+                            "Customer Score": "73%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "The Range (49)",
+                            "Customer Score": "67%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★",
+                            "Delivery": "★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Wickes (35)",
+                            "Customer Score": "67%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★",
+                            "Delivery": "★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "-",
+                            "Product range/availability": "★★",
+                            "WRP": ""
+                        }
+                    ]
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "RICHER SOUNDS 93%",
+                    "content": "Yet again Richer Sounds triumphs in our league table of tech retailers (see p15). Shoppers love the choice of products and the quality they offer. They're also happy with the customer service and overall value for money at Richer Sounds. But what really stands out is the staff and their specialist knowledge, making customers feel valued and confident in their choices. One happy customer told us: 'It feels like a specialist service – staff really know what they are talking about.' Other shoppers praised the price-match promise and the warranties."
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "HP 80%",
+                    "content": "Shoppers appreciate the choice available at HP.com, despite the fact that it sells only its own products. It might not have any physical stores, but that doesn't put customers off. In fact, they like how easy its website is to use, along with its reliable deliveries. We found overall that most tech shoppers order online – only a quarter bought in-store. HP.com is one of several manufacturers selling direct to customers that shoppers have rated highly this year. One said: 'HP makes the product so, given its competitive pricing, it makes sense to purchase from it.'"
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "JOHN LEWIS 87% / 89%",
+                    "content": "John Lewis is a great all-rounder, finishing in a strong second place for both tech and appliance shopping. Shoppers value its great reputation and reliable service, with many people saying the top-quality products and excellent customer service are what draws them to John Lewis.\n\nIt's been a big year for the retailer, with a new chairman (ex-Tesco boss Jason Tarry) and a decision to bring back its 'never knowingly undersold' price promise. But losses in the first half of the year nearly tripled, despite a 4% rise in sales, after restructuring costs and new tax and regulatory charges. One shopper said: 'I can always trust John Lewis – it is usually very fair with its customers. The quality of what it sells is good, and there's usually a good choice whatever I'm buying.' Customers also like the after-sales care it offers. It's perhaps no surprise, then, that John Lewis is a WRP for both tech purchases and home appliance products."
+                },
+                {
+                    "section_type": "data_table",
+                    "title": "THE BEST TECH STORES",
+                    "note": "The results are based on an online survey of 4,076 respondents – members of the Which? Connect panel and the general public – who told us about 6,485 experiences with tech product retailers. The survey was conducted in July and August 2025. Sample sizes in brackets. A dash (-) means not enough responses to include a star rating. Customer score is based on satisfaction with the brand and likelihood to recommend.",
+                    "columns": [
+                        "Retailer",
+                        "Customer Score",
+                        "Value for money",
+                        "After-sales service and returns",
+                        "Delivery",
+                        "How easy it is to use the website/app",
+                        "Customer service during the buying process",
+                        "Product quality",
+                        "Product range/availability",
+                        "WRP"
+                    ],
+                    "table_data": [
+                        {
+                            "Retailer": "Richer Sounds (141)",
+                            "Customer Score": "93%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★★",
+                            "Product quality": "★★★★★",
+                            "Product range/availability": "★★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "John Lewis (737)",
+                            "Customer Score": "87%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★★",
+                            "Product quality": "★★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "Apple (718)",
+                            "Customer Score": "86%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★★",
+                            "Product quality": "★★★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Samsung (242)",
+                            "Customer Score": "84%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★★",
+                            "Product quality": "★★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "Costco (88)",
+                            "Customer Score": "83%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★★★",
+                            "Delivery": "★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★★",
+                            "Product range/availability": "★★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "AO (140)",
+                            "Customer Score": "81%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "Dell (148)",
+                            "Customer Score": "80%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★",
+                            "How easy it is to use the website/app": "★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "HP (123)",
+                            "Customer Score": "80%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": "!"
+                        },
+                        {
+                            "Retailer": "Amazon (1,833)",
+                            "Customer Score": "79%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★★",
+                            "Product quality": "★★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Very (71)",
+                            "Customer Score": "78%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Argos (652)",
+                            "Customer Score": "77%",
+                            "Value for money": "★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Ebuyer (50)",
+                            "Customer Score": "77%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "-",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Laptops Direct (59)",
+                            "Customer Score": "76%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Game (44)",
+                            "Customer Score": "75%",
+                            "Value for money": "★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Lenovo (56)",
+                            "Customer Score": "75%",
+                            "Value for money": "★★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★★",
+                            "Product range/availability": "★★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Currys (836)",
+                            "Customer Score": "74%",
+                            "Value for money": "★★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Asda / George (109)",
+                            "Customer Score": "73%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Tesco (239)",
+                            "Customer Score": "72%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★★",
+                            "Delivery": "★★★★",
+                            "How easy it is to use the website/app": "★★★",
+                            "Customer service during the buying process": "★★★★",
+                            "Product quality": "★★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        },
+                        {
+                            "Retailer": "Sainsbury's (93)",
+                            "Customer Score": "71%",
+                            "Value for money": "★★★",
+                            "After-sales service and returns": "★★★",
+                            "Delivery": "★★★",
+                            "How easy it is to use the website/app": "-",
+                            "Customer service during the buying process": "-",
+                            "Product quality": "★★★",
+                            "Product range/availability": "★★★",
+                            "WRP": ""
+                        }
+                    ]
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "AO 81% / 84%",
+                    "content": "Although it may be best known for selling appliances, AO now also sells a range of tech products. It does well in both our league tables, being named a WRP for both, and is particularly highly regarded for its huge range of products. Shoppers also love its fast delivery and efficient website. One shopper explained: 'The whole process was easy and smooth. The website was clear, the prices were fair and the delivery was fast. The appliances arrived in great condition, and the customer service was helpful. I would definitely use the company again.'\n\nSome customers picked out its loyalty scheme for special mention – for £39.99 a year, you get free and unlimited delivery, free unpacking and removal of your old appliance, plus member-only savings. Some said it paid for itself, while others saw it as a potential subscription trap, particularly if you forget to cancel it."
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "LAKELAND 86%",
+                    "content": "Lakeland is near the top of the table yet again. Shoppers rave about its three-year guarantee. It's great for both shopping in person and online, with an easy-to-use website and stores that shoppers love to linger in. One said: 'It offers quality goods by pleasant helpful staff in a local store. A lovely place to browse.' Earlier this year, Lakeland underwent a management buyout funded by Hilco Capital, former owner of HMV and Homebase."
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "NEXT 84%",
+                    "content": "Shoppers trust Next and value its reliable reputation. They love the choice of products and the high quality on offer. While it doesn't sell some of the bigger appliances, it does have a range of kettles, toasters, microwaves, air fryers and the like. One customer said: 'It offers high quality and innovative products, plus it has a good returns policy and customer support.' Another added: 'Its selection isn't huge, but its speed of delivery is good and you know there will be no problems if you need to return an item.' It performs so well, and has such good returns policies, that we've made it a WRP."
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "SAMSUNG 84% / 91%",
+                    "content": "Samsung is the place to go for home appliances. It's had a stellar year, leaping from eighth place in 2024 to topping the table in 2025. It got top marks for everything – from value for money to the choice of appliances. It comes in an impressive fourth place for tech purchases, and is also great for refurbished tech products. One customer said: 'It offers high-quality products and quality services at affordable prices.' Samsung is also a WRP this year."
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "EURONICS 86%",
+                    "content": "Yet again this network of independent appliance specialists performs excellently. Euronics has a loyal following among customers, who especially love its knowledgeable and helpful staff. Many of its branches are family-run businesses that have been around for decades. One customer said: 'It offers great advice and customer service. It isn't just interested in selling; it does the right thing for the customer.' Shoppers praised its fast delivery and reliable reputation, which is important as many appliance purchases are made in a hurry when the old one breaks down."
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "APPLE 86%",
+                    "content": "Shoppers can't fault Apple for anything – except value for money. The American tech firm gets the highest possible ratings for every aspect of the shopping experience apart from value, for which it gets three stars out of five. 'Great product and service… but very expensive,' was how one shopper summed it up.\n\nCustomers still love Apple, though, with many telling us how trustworthy and reliable it is. Many said they were repeat customers, always going back to Apple for their next tech purchase. One told us: 'I have used Apple for multiple years and its products have always exceeded my expectations. The quality is also excellent; despite paying extra for products, you definitely get your money's worth eventually.' Apple opened its first UK store 20 years ago and now has 40 across the country, including a flagship store in London's Regent Street."
+                },
+                {
+                    "section_type": "callout_box",
+                    "title": "AMAZON 79% / 79%",
+                    "content": "Like it or loathe it, Amazon is a big player for both tech and home appliances, and it should come as no surprise that shoppers love its huge range of products. They also find its website easy to use and think its deliveries are top notch.\n\nMany shoppers have a love-hate relationship with Amazon, though. Quite a few told us they find it convenient and good value but aren't huge fans of some of some parts of its business model.\n\nSome people mentioned its effects on the high street, while others said they didn't trust Amazon reviews or the constant push for Prime sign-ups. Several shoppers described the Amazon website as having 'good products mixed up with a load of rubbish'. One customer explained: 'I buy from Amazon, but I really don't like it. I don't like what it has done to the rest of the market and I don't like its way of dealing with customers.'"
+                }
+            ]
+        }
+    ]
+}

@@ -7,6 +7,7 @@ import magazinesData from './data/magazines.json';
 import magazineIssuesData from './data/magazine-issues.json';
 import magazineContentsData from './data/magazine-contents.json';
 import foodPricesArticleData from './data/article-how-to-beat-rising-food-prices.json';
+import techArticleData from './data/tech.json';
 
 // Import icons from lucide-react
 // Don't forget to run: npm install lucide-react
@@ -192,7 +193,16 @@ function App() {
       case 'magazine':
         // Show article page if an article is selected
         if (selectedArticleId) {
-          const article = foodPricesArticleData.articles[0]; // Use the food prices article
+          // Select the correct article data based on the article ID
+          let article;
+          if (selectedArticleId === 1) {
+            article = foodPricesArticleData.articles[0]; // "How to beat rising food prices"
+          } else if (selectedArticleId === 2) {
+            article = techArticleData.articles[0]; // "TECH & HOME STORES"
+          } else {
+            // Default fallback
+            article = foodPricesArticleData.articles[0];
+          }
           
           return (
             <div className="article-page-container">
@@ -425,13 +435,13 @@ function App() {
               {issueContent.articles.filter(article => article.isFeatured).map(article => (
                 <div 
                   key={article.id} 
-                  className={`featured-article ${article.title === 'How to beat rising food prices' ? 'clickable' : ''}`}
+                  className={`featured-article ${(article.id === 1 || article.id === 2) ? 'clickable' : ''}`}
                   onClick={() => {
-                    if (article.title === 'How to beat rising food prices') {
+                    if (article.id === 1 || article.id === 2) {
                       setSelectedArticleId(article.id);
                     }
                   }}
-                  style={{ cursor: article.title === 'How to beat rising food prices' ? 'pointer' : 'default' }}
+                  style={{ cursor: (article.id === 1 || article.id === 2) ? 'pointer' : 'default' }}
                 >
                   <img 
                     src={article.image} 
@@ -449,7 +459,16 @@ function App() {
               {/* Regular Articles Grid */}
               <div className="articles-content-grid">
                 {issueContent.articles.filter(article => !article.isFeatured).map(article => (
-                  <div key={article.id} className="article-content-card">
+                  <div 
+                    key={article.id} 
+                    className={`article-content-card ${(article.id === 1 || article.id === 2) ? 'clickable' : ''}`}
+                    onClick={() => {
+                      if (article.id === 1 || article.id === 2) {
+                        setSelectedArticleId(article.id);
+                      }
+                    }}
+                    style={{ cursor: (article.id === 1 || article.id === 2) ? 'pointer' : 'default' }}
+                  >
                     <img 
                       src={article.image} 
                       alt={article.title}
